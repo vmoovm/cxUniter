@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>今日学习监控</title>
+		<link href="css/base.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/ratio.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/cx_echarts_vintage.js"></script>
+	</head>
+
+	<body>
+		<ul class="cx_tabList">
+			<li class="cx_tabList-cur">今日学习监控</li>
+			<li>全校学习监控</li>
+		</ul>
+		<div class="zcount">
+			<dl class="zcount-flex zcount-item">
+				<dt>学生今日完成任务量</dt>
+				<dd>4163</dd>
+			</dl>
+			<dl class="zcount-flex zcount-item">
+				<dt>完成视频数</dt>
+				<dd>4163</dd>
+			</dl>
+			<dl class="zcount-flex zcount-item">
+				<dt>其他任务点</dt>
+				<dd>4163</dd>
+			</dl>
+		</div>
+		<!--学习终端占比 start-->
+		<div class="ztitle">
+			<p class="ztitle-type"><span>动态</span></p><span class="ztitle-state">实时</span>
+			<h1 class="ztitle-th" id="div4">
+				<a href="#">李小兵在10：11分完成了课堂活动—签到课堂活动—签到</a>
+				<a href="#">李小兵在10：11分完成了课堂活动—签到…</a>
+				<a href="#">李小兵在10：11分完成了课堂活动—签到…</a>
+			</h1>
+		</div>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">学习终端占比</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_xue_xi_zhong_duan_zhan_bi">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>pc占比</p>
+						<h1>47%</h1>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col2">
+						<p>Android占比</p>
+						<h1>38%</h1>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col3">
+						<p>ios占比</p>
+						<h1>15%</h1>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--学习终端占比 end-->
+		<!--完成课堂活动 start-->
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">完成课堂活动</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_wan_cheng_ke_tang_huo_dong">
+				
+			</div>
+		</div>
+		<!--完成课堂活动 end-->
+		<!--课下作业完成情况 start-->
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">课下作业完成情况</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_ke_xia_zuo_ye_wan_cheng">
+				
+			</div>
+		</div>
+		<!--课下作业完成情况 end-->
+		<!--学生活跃度排名 start-->
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">学生活跃度排名</h2>
+			</div>
+			<div class="zstuHot-bg">
+				<div class="zstuHot-first">
+					<p class="zstuHot-img"><img src="temp/20160104162001.png"/></p>
+					<dl class="zstuHot-nameBefore">
+						<dt>章小蕙</dt>
+						<dd>2082</dd>
+					</dl>
+					<h1 class="zstuHot-school">网络学习教学学院</h1>
+				</div>
+				<div class="zstuHot-second">
+					<p class="zstuHot-img"><img src="temp/20160104162001.png"/></p>
+					<dl class="zstuHot-nameBefore">
+						<dt>刘莘</dt>
+						<dd>1964</dd>
+					</dl>
+					<h1 class="zstuHot-school">动画影视学院</h1>
+				</div>
+				<div class="zstuHot-third">
+					<p class="zstuHot-img"><img src="temp/20160104162001.png"/></p>
+					<dl class="zstuHot-nameBefore">
+						<dt>唐晓玲</dt>
+						<dd>263</dd>
+					</dl>
+					<h1 class="zstuHot-school">中国历史学院</h1>
+				</div>
+			</div>
+			<div class="zstuHot-list">
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">4.</div>
+					<div class="zstuHot-pic"><img src="temp/20160104162001.png" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">5.</div>
+					<div class="zstuHot-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">6.</div>
+					<div class="zstuHot-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">7.</div>
+					<div class="zstuHot-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">8.</div>
+					<div class="zstuHot-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">9.</div>
+					<div class="zstuHot-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="zstuHot-row">
+					<div class="zstuHot-num">10.</div>
+					<div class="zstuHot-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="zstuHot-txt">
+						<dl class="zstuHot-th zstuHot-thw">
+							<dt class="zstuHot-align"> 柳辰飞 </dt>
+						</dl>
+						<dl class="zstuHot-count">
+							<dt class="zstuHot-tt">847</dt>
+						</dl>
+						<dl class="zstuHot-right">
+							<dt>网络商学院</dt>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--学生活跃度排名 end-->
+		<!--访问量趋势（近24h） start-->
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">访问量趋势（近24h）</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_fang_wen_liang_qu_shi">
+				
+			</div>
+		</div>
+		<!--访问量趋势（近24h） end-->
+		<script src="js/mychart_xue_xi_jian_kong.js"></script>
+		<script src="js/newsScrolling.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			CXFun_newScrolling('div4', 3000);
+		</script>
+	</body>
+</html>

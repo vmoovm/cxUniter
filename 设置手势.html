@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=100%; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<title>设置手势-jQuery手机手势密码图案解锁代码</title>
+		<link href="css/cxUniter.css" rel="stylesheet"/>
+		<style type="text/css">
+			/**无关样式**/
+			.fontTips { font-size: 16px; color: #999; line-height: 1.8; padding: 10px 0 }
+		</style>
+		<style type="text/css">
+			/*主要样式*/
+			.gesturepwd { width: 5.7rem; height: 5.7rem; margin:0 auto;}
+			.gesturepwd canvas { width: 5.7rem; height: 5.7rem;}
+			.rebuild { width: 240px; margin: 0 auto; font-size: 16px; padding: 20px 0 20px 30px; color: #999; }
+			.rebuild span.blue { color: #0099ff }
+		</style>
+		<script src="js/ratio.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.9.0.min.js"></script>
+		<script src="js/jquery.gesture.password.js"></script>
+	</head>
+
+	<body>
+		<header class="cx_header">
+			<div class="cx_header-box">
+				<h1 class="cx_header-title">学习通</h1>
+				<div class="cx_header-link">
+					<div class="cx_header-body">
+						<a class="cx_header-arrow" href="#"></a>
+						<a class="cx_header-left" href="#">确定</a>
+						<p class="cx_header-flex"></p>
+						<a class="cx_header-right" href="#">取消</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<input type="hidden" name="" id="code" value="1479" />
+		<input type="hidden" id="otherId"   value="3"  >
+		<div align="center" class="fontTips">
+			<p>通过滑动创建一个签到手势并传达给学生，</p>
+			<p>学生输入正确手势完成签到</p>
+			<p>（签到手势最少连接4个点）</p>
+		</div>
+		<div class="gesturepwd">
+		</div>
+		<script>
+			$(".gesturepwd").GesturePasswd({
+				backgroundColor: "none", //背景色
+				color: "#999", //主要的控件颜色
+				roundRadii: 60, //大圆点的半径
+				pointRadii: 16, //大圆点被选中时显示的圆心的半径
+				space: 70, //大圆点之间的间隙
+				width: 570, //整个组件的宽度
+				height: 570, //整个组件的高度
+				lineColor: "rgba(0, 153, 255, .5)", //用户划出线条的颜色
+				cirCleColor: "rgba(0, 153, 255, 1)", //用户划出圆的颜色
+				zindex: 100, //整个组件的css z-index属性
+				isRem: true, // 是否使用rem（默认比例750/100）
+				connectLen: 3
+			});
+			if ($('#otherId').val() == 3 && !isNaN(parseInt($('#code').val())) && $('#code').val().length > 3) {
+				$(".gesturepwd").trigger("read", [$('#code').val()]);
+				$(".rebuild span").addClass("blue") //重设按钮变成蓝色
+			}
+			
+			
+			$(".gesturepwd").on("hasPasswd", function(e, passwd) {
+				console.log('---'+passwd+'----');
+				$(".gesturepwd").trigger("complete");
+				// $(".gesturepwd").trigger("passwdWrong");
+				// $(".gesturepwd").trigger("default", ['#cccccc','#ff99dd']);
+			
+				// 自定义颜色
+				// $(".gesturepwd").trigger("default", ['rgba(0, 0, 0, 1)','rgba(0, 0, 0, .5)']);
+				// 完成设置
+				// $(".gesturepwd").trigger("complete");
+				// 禁止划动
+				// $(".gesturepwd").trigger("noSwiper");
+				// 密码错误
+				// $(".gesturepwd").trigger("passwdWrong");
+				// 密码正确
+				// $(".gesturepwd").trigger("passwdRight");
+				// 重新设置
+				// $(".gesturepwd").trigger("rebuild");
+				// 密码太短
+				// $(".gesturepwd").trigger("passwdLen");
+			});
+			$(".rebuild span").addClass("blue") //重设按钮变成蓝色
+			
+			function rebuildPass() {
+				$(".gesturepwd").trigger("rebuild");
+			}
+		</script>
+		<div class="rebuild">
+			<span class="blue" onclick="rebuildPass()">重设</span>
+		</div>
+	</body>
+
+</html>

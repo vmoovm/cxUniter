@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>上传图片列表—多行文本输入</title>
+<link rel="stylesheet" type="text/css" href="../css/cxUniter.css"/>
+<link rel="stylesheet" type="text/css" href="../css/upLoadImgList.css"/>
+<script src="../js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/ratio.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../js/ResetImg.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="../js/ResetImg.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<header class="cx_header">
+		<div class="cx_header-box">
+			<h1 class="cx_header-title">学习通</h1>
+			<div class="cx_header-link">
+				<div class="cx_header-body">
+					<a class="cx_header-arrow" href="#"></a>
+					<a class="cx_header-left" href="#">确定</a>
+					<p class="cx_header-flex"></p>
+					<a class="cx_header-right" href="#">取消</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--多行输入 start-->
+	
+	<div class="cx_upLoadImgList" id="imgs">
+		<div class="cx_upLoadImgList-intitle">
+			<h2><span>1.[简答题]</span>输入标题后展示时的样式</h2>
+		</div>
+		<div class="cx_upLoadImgList-contenteditable">
+			<textarea name="" rows="" cols="" placeholder="最多200字"></textarea>
+		</div>
+		<div class="cx_cameraBtn1"><span></span></div>
+		<div class="cx_upLoadImgList-img">
+			<dl class="cx_upLoadImgList-imgList">
+				<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/20160104162001.png" id="img2" /></em><span class="cx_upLoadImgList-close"></span></dd>
+				<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/201612061747_06.png" id="img1" /></em><span class="cx_upLoadImgList-close"></span></dd>
+				<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/201706221056_03.jpg" /></em><span class="cx_upLoadImgList-close"></span></dd>
+				<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/20170721150128.png" /></em><span class="cx_upLoadImgList-close"></span></dd>
+				<dt class="cx_upLoadImgList-addImg"></dt>
+			</dl>
+		</div>
+		<div class="cx_upLoadImgList-intitle">
+			<h2><span>2.[简答题]</span>输入标题后展示时的样式</h2>
+		</div>
+		<div class="cx_upLoadImgList-contenteditable">
+			<textarea name="" rows="" cols="" placeholder="最多200字"></textarea>
+		</div>
+		<div class="cx_cameraBtn1"><span></span></div>
+		<div class="cx_upLoadImgList-img">
+			<dl class="cx_upLoadImgList-imgList">
+				<!--<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/20160104162001.png" id="img2" /></em><span class="cx_upLoadImgList-close"></span></dd>
+					<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/201612061747_06.png" id="img1" /></em><span class="cx_upLoadImgList-close"></span></dd>
+				<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/201706221056_03.jpg" /></em><span class="cx_upLoadImgList-close"></span></dd>
+				<dd class="cx_upLoadImgList-rel"><em class="cx_upLoadImgList-view"><img src="../temp/20170721150128.png" /></em><span class="cx_upLoadImgList-close"></span></dd>-->
+				<dt class="cx_upLoadImgList-addImg"></dt>
+			</dl>
+		</div>
+	</div>
+	<!--多行输入 end-->
+		
+		
+	<script type="text/javascript">
+	    
+	    //实例化图片填满格子
+		var resetImg=new ResetImg('#imgs', {
+			imgSizeClass: {
+				wc: 'cx_imgList-imgw100',
+				hc: 'cx_imgList-imgh100',
+				imgBox:'.cx_upLoadImgList-rel'
+			}
+		});
+		
+	</script>
+</body>
+
+</html>

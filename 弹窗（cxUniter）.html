@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>弹窗</title>
+<link rel="stylesheet" type="text/css" href="css/cxUniter.css"/>
+<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ratio.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--main start-->
+<header class="cx_header">
+		<div class="cx_header-box">
+			<h1 class="cx_header-title">学习通</h1>
+			<div class="cx_header-link">
+				<div class="cx_header-body">
+					<a class="cx_header-arrow" href="#"></a>
+					<a class="cx_header-left" href="#">确定</a>
+					<p class="cx_header-flex"></p>
+					<a class="cx_header-right" href="#">取消</a>
+				</div>
+			</div>
+		</div>
+	</header>
+<!--alert start-->
+<article class="cx_alert" style="display: block;"></article>
+<article class="cx_alert-box" style="display: block;">
+	<div class="cx_alert-content">
+		<div class="cx_alert-txt">
+			您还没有设置密码，是否现在设置？
+		</div>
+	</div>
+	<div class="cx_alert-btn">
+		<ul>
+			<li class="cx_alert-black">暂不设置</li>
+			<li class="cx_alert-blue">继续</li>
+		</ul>
+	</div>
+</article>
+<!--alert end-->
+
+<script type="text/javascript">
+	$(".cx_alert-box").css('marginTop','-'+$(".cx_alert-box").height()/2 - 35 +'px');
+</script>
+</body>
+</html>

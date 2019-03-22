@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*----------------------------------------------------
+portrait头像
+-----------------------------------------------------*/
+.cx_portrait { padding-left: .3rem; padding-bottom: .3rem;}
+.cx_portrait-row { display: -webkit-box; padding-top: .1rem; padding-bottom: .1rem;}
+.cx_portrait-num { width: .4rem; margin-right: .22rem; line-height: .8rem; font-size: .26rem; color: #ff3b30; text-align: center;}
+.cx_portrait-row .znumberOne { background: url(../images/numberOne.png) center no-repeat; background-size: 0.42rem;}
+.cx_portrait-row:nth-child(n+4) .cx_portrait-num { color: #999;}
+
+.cx_portrait-pic { position: relative; width: .8rem; height: .8rem; margin-right: .24rem; border: 1px #ebebeb solid; text-align: center;}
+.cx_portrait-pic img { width: .8rem;}
+.cx_portrait-info { -webkit-box-flex:1; display: -webkit-box; padding-top: .05rem; padding-bottom: .25rem; padding-right: .3rem; line-height: .36rem;}
+.cx_portrait-txt { -webkit-box-flex:1; display: -webkit-box; -webkit-box-orient: vertical; -webkit-box-pack: center;}
+.cx_portrait-line { background-image: -webkit-linear-gradient(transparent 40%, #ebebeb 40%); background-size: 100% 1px; background-repeat: no-repeat; background-position: bottom;}
+.cx_portrait-tt { font-size: .24rem; color: #999;}
+.cx_portrait-name { max-width: 1.6rem; font-size: .26rem; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.cx_portrait-message { padding-top: .08rem; padding-bottom: .1rem; min-height: .36rem; line-height: .36rem; font-size: .28rem; color: #777;}
+
+.cx_portrait-right { display: -webkit-box; -webkit-box-orient: vertical; -webkit-box-pack: center; padding-left: .2rem; font-size: .24rem; color: #999;  text-align: right;}
+.cx_portrait-right h2 { font-size: .24rem;  max-width: 2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.cx_portrait-right img { width: .7rem; height: .94rem; margin-left: .24rem; border-radius: .09rem;}
+.cx_portrait-right span,
+.cx_portrait-right i,
+.cx_portrait-right em {display: inline-block; vertical-align: middle; font-size: .3rem;}
+
+.cx_portrait-red { color: red;}
+.cx_portrait-blue { color: #09f;}
+.cx_portrait-arrowr { padding-right: .38rem; background: url(../images/arrow_small.png) right center no-repeat; background-size: .24rem;}
+.cx_portrait-arrowd { padding-right: .38rem; background: url(../images/arrowDown_03.png) right center no-repeat; background-size: .24rem;}
+
+.cx_portrait-btn {display:-webkit-box;-webkit-box-align:center; padding-left: .2rem;}
+.cx_portrait-btn p { width:1rem; height: .48rem; border:solid #4397f7 1px; border-radius: .08rem; line-height:normal; font-size: .28rem; color:#4397f7;
+	display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-orient:vertical;}
+/*多选*/
+/*.cx_portrait-checkbox { display: -webkit-box; -webkit-box-align: center; width: .8rem;}
+.cx_portrait-checkbox input[type='checkbox'] { width: 0px; height: 0px;}
+.cx_portrait-checkbox input[type='checkbox']:after { display: block; content: ''; margin-left: -.05rem; margin-top: -.25rem; width: .5rem; height: .5rem; background-image: url(../images/checkbox.png); background-position: center center; background-repeat: no-repeat; background-size: .48rem;}
+.cx_portrait-checkbox input[type='checkbox']:checked:after { background-image: url(../images/checkbox_checked.png);}*/
+/*单选*/
+/*.cx_portrait-radio { display: -webkit-box; -webkit-box-align: center; width: .8rem;}
+.cx_portrait-radio input[type='radio'] { width: 0px; height: 0px;}
+.cx_portrait-radio input[type='radio']:after { display: block; content: ''; margin-left: -.05rem; margin-top: -.25rem; width: .5rem; height: .5rem; background-image: url(../images/radioLg.png); background-position: center center; background-repeat: no-repeat; background-size: .48rem;}
+.cx_portrait-radio input[type='radio']:checked:after { background-image: url(../images/radioLg_checked.png);}*/
+
+/*九宫格*/
+/*.cx_portrait-imgwrap { padding-top: .14rem; padding-bottom: .3rem;}
+.cx_portrait-imgList { display: -webkit-box; padding-top: .03rem;}
+.cx_portrait-img { -webkit-box-flex: 1; padding-left: .05rem;}
+.cx_portrait-img:first-child { padding-left: 0;}
+.cx_portrait-img img { width: 1.9rem; height: 1.9rem; border: 1px #d9d9d9 solid;}*/
+
+/*小花修饰*/
+.cx_portrait-align { display: -webkit-box; -webkit-box-align: center; }
+.cx_portrait-flower { margin-left: .1rem;}
+.cx_portrait-star { margin-left: .1rem;}
+.cx_portrait-flower .petalNew{margin-top: -12px;}
+.cx_portrait-star .starBox { margin-top:1px;}
+/*小花右侧内容*/
+.cx_portrait-flex { -webkit-box-flex: 1; text-align: right; font-size: .24rem; color: #999;}

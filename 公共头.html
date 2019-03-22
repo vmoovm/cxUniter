@@ -1,0 +1,60 @@
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>公共头</title>
+		<link href="css/cxUniter.css" rel="stylesheet" type="text/css" />
+		<script src="js/ratio.js" type="text/javascript"></script>
+		<style>
+		.iph_show{ padding-top:0.33rem;}
+		@media screen and (device-width:375px) and (device-height:812px){
+		    .iph_show { padding-top:0.78rem;}
+		}
+		
+		</style>
+		<script language="javascript">
+		window.onload = function () {
+			//alert("1");
+			if (navigator.userAgent.indexOf('iPhone') > -1) {//苹果手机
+				//alert("苹果手机");
+				document.getElementById("cx_header").className="iph_show";
+			} 
+		}
+		</script>
+	</head>
+	<body>
+		<header class="cx_header" id="cx_header">
+			<div class="cx_header-box">
+				<h1 class="cx_header-title">学习通</h1>
+				<div class="cx_header-link">
+					<div class="cx_header-body">
+						<a class="cx_header-arrow" href="#"></a>
+						<a class="cx_header-left" href="#">确定</a>
+						<p class="cx_header-flex"></p>
+						<a class="cx_header-right" href="#">取消</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="cx_ht-lg">
+			<h1>使用cx_header以便使用cx_header-fixedBottom cx_header-fixedTop</h1>
+		</div>
+		<div class="cx_ht-lg">
+			<h1>一般使用，定在顶部可配置cx_box使用</h1>
+		</div>
+		<header class="cx_header-box">
+			<h1 class="cx_header-title">大标题</h1>
+			<div class="cx_header-link">
+				<div class="cx_header-body">
+					<a class="cx_header-arrow" href="#"></a>
+					<a class="cx_header-left" href="#">确定</a>
+					<p class="cx_header-flex"></p>
+					<a class="cx_header-right" href="#">取消</a>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>

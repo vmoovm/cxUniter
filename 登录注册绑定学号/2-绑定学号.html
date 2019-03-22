@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>2-绑定学号</title>
+		<link href="../css/cxUniter.css" rel="stylesheet" type="text/css" />
+		<link href="../css/form.css" rel="stylesheet" type="text/css" />
+		<script src="../js/ratio.js" type="text/javascript"></script>
+		<script src="../js/jquery-1.9.0.min.js" type="text/javascript"></script>
+		<style type="text/css">
+			.zform-register { padding-top: .2rem; line-height: .84rem; text-align: center; font-size: .24rem;}
+			.zform-register a { color: #09f;}
+			.cx_alert-bg { bottom: 2rem;}
+		</style>
+	</head>
+
+	<body>
+		<!--main start-->
+		<div class="zform">
+			<dl class="zwelcome">
+				<dt>绑定学号</dt>
+				<dd class="zerror">绑定失败，请再次确认您要绑定的学号相关信息</dd>
+			</dl>
+			<ul class="zform-row">
+				<li class="zform-input"><input type="text" name="" id="organization" value="西南交通大学" placeholder="学校/机构码" />
+					<div class="zform-site" id="organization-list">
+						<dl class="zform-search">
+							<dd><a href="#">检索内容</a></dd>
+							<dd><a href="#">测试3</a></dd>
+							<dd><a href="#">测试2</a></dd>
+						</dl>
+					</div>
+				</li>
+			</ul>
+			<ul class="zform-row">
+				<li class="zform-input"><input type="text" name="" id="" value="201893407583" placeholder="学号" /></li>
+			</ul>
+			<ul class="zform-row">
+				<li class="zform-input"><input type="text" name="" id="" value="冰爽" placeholder="姓名" /></li>
+			</ul>
+			<div class="cx_btn-top">
+				<p class="cx_btn-go"><a href="javascript:isbind()">绑定</a></p>
+			</div>
+		</div>
+		<!--main end-->
+		<script type="text/javascript">
+			function prompt(title,second){
+				$("<article class='cx_alert-bg' style='opacity:1'><span>"+title+"</span></article>").appendTo($(document.body)).delay(1000*second).fadeOut(1000,function(){
+					$(this).remove();
+				});
+			}
+			$("#organization").on('input', function () {
+				if (!$("#organization-list").is(":visible")) {
+					$("#organization-list").slideDown(100);
+				}
+			});
+			
+			$(document).on('click', function (e) {
+				if ($(e.target).parents('dd').length) {
+					$("#organization").val($(e.target).text())
+				}
+				$("#organization-list").slideUp(100);
+			})
+			
+			function isbind(){
+				prompt('绑定成功',1)
+				// prompt('学号不存在',1)
+			}
+		</script>
+	</body>
+</html>

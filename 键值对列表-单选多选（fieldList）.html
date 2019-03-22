@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>键值对列表</title>
+		<link href="css/cxUniter.css" rel="stylesheet"/>
+		<link href="css/swiper.css" rel="stylesheet"/>
+		<link href="css/portrait.css" rel="stylesheet"/>
+		<link href="css/fieldList.css" rel="stylesheet" />
+		<script src="js/jquery-1.9.0.min.js"></script>
+		<script src="js/ratio.js"></script>
+		<style type="text/css">
+			.pt { padding: .4rem .3rem;}
+			.pt-item { padding-bottom: .3rem;}
+			.pt-img { margin-left: .66rem;}
+			
+			.pt-itemBox { padding-top: .2rem; border-bottom: 1px #ebebeb solid; }
+			.pt-itemHor { display: -webkit-box; padding-top: .2rem; border-bottom: 1px #ebebeb solid; }
+			.pt-itemHor .cx_checkbox {}
+			
+		</style>
+		<script src="js/swiper.min.js"></script>
+	</head>
+
+	<body>
+		<div class="cx_box">
+			<header class="cx_header">
+				<div class="cx_header-box">
+					<h1 class="cx_header-title">学习通</h1>
+					<div class="cx_header-link">
+						<div class="cx_header-body">
+							<a class="cx_header-arrow" href="#"></a>
+							<a class="cx_header-left" href="#">确定</a>
+							<p class="cx_header-flex"></p>
+							<a class="cx_header-right" href="#">取消</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="cx_box-content">
+				<div class="pt">
+					<ul class="pt-item">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox1" id="checkbox1" value="" checked="checked"/><label for="checkbox1" class="cx_checkbox-style">他国一共有10000000万万亿000000万万亿个省他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox2" id="checkbox2" value=""/><label for="checkbox2" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+							<div class="pt-img"><img src="temp/201706221056_03.jpg"/></div>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox3" id="checkbox3" value=""/><label for="checkbox3" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox4" id="checkbox4" value=""/><label for="checkbox4" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+					</ul>
+					<ul class="pt-item">
+						<li class="cx_radio">
+							<input type="radio" name="radio1" id="radio1" value="" checked="checked"/><label for="radio1" class="cx_radio-style">他国一共有10000000万万亿000000万万亿个省他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio1" id="radio2" value=""/><label for="radio2" class="cx_radio-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio1" id="radio3" value=""/><label for="radio3" class="cx_radio-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio1" id="radio4" value=""/><label for="radio4" class="cx_radio-style">他国一共有10000000万万亿个省</label>
+						</li>
+					</ul>
+					<ul class="pt-item">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox5" id="checkbox5" value="" checked="checked" disabled="disabled"/><label for="checkbox5" class="cx_checkbox-style">他国一共有10000000万万亿000000万万亿个省他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox6" id="checkbox6" value=""/><label for="checkbox6" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox7" id="checkbox7" value=""/><label for="checkbox7" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox8" id="checkbox8" value=""/><label for="checkbox8" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+					</ul>
+					<ul class="pt-item">
+						<li class="cx_radio">
+							<input type="radio" name="radio2" id="radio5" value="" checked="checked" disabled="disabled"/><label for="radio5" class="cx_radio-style">他国一共有10000000万万亿000000万万亿个省他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio2" id="radio6" value="" disabled="disabled"/><label for="radio6" class="cx_radio-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio2" id="radio7" value="" disabled="disabled"/><label for="radio7" class="cx_radio-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio2" id="radio8" value="" disabled="disabled"/><label for="radio8" class="cx_radio-style">他国一共有10000000万万亿个省</label>
+						</li>
+					</ul>
+					<ul class="pt-item">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox9" id="checkbox9" value="" checked="checked"/><label for="checkbox9" class="cx_checkbox-style">他国一共有10000000万万亿000000万万亿个省他国一共有10000000万万亿个省</label>
+							<div class="pt-img"><img src="temp/201706221056_03.jpg"/></div>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox10" id="checkbox10" value=""/><label for="checkbox10" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox11" id="checkbox11" value=""/><label for="checkbox11" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox12" id="checkbox12" value=""/><label for="checkbox12" class="cx_checkbox-style">他国一共有10000000万万亿个省</label>
+						</li>
+					</ul>
+					<style type="text/css">
+						.cx_radio .cx_portrait-row,
+						.cx_checkbox .cx_portrait-row { padding-top: 0; padding-bottom: 0;}
+						.cx_checkbox .cx_portrait-info { padding-right: 0;}
+						
+					</style>
+					<ul class="pt-itemBox">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox13" id="checkbox13" value="" checked="checked"/><label>
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/20160104162001.png" /></div>
+									<div class="cx_portrait-info cx_portrait-line">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox14" id="checkbox14" value=""/><label>
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/20160104162001.png" /></div>
+									<div class="cx_portrait-info cx_portrait-line">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox15" id="checkbox15" value=""/><label>
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/20160104162001.png" /></div>
+									<div class="cx_portrait-info cx_portrait-line">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+					</ul>
+					<ul class="pt-itemBox">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox16" id="checkbox16" value="" checked="checked"/><label for="checkbox16">
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+									<div class="cx_portrait-info cx_portrait-line">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞</h1>
+												<div class="cx_portrait-flower">放小花</div>
+												<div class="cx_portrait-star">放星星</div>
+												<div class="cx_portrait-flex">2010-10-10</div>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+										<dl class="cx_portrait-right">
+											<dt>06'25"</dt>
+											<dd>北京</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox17" id="checkbox17" value=""/><label for="checkbox17">
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+									<div class="cx_portrait-info cx_portrait-line">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+												<div class="cx_portrait-flower">放小花</div>
+												<div class="cx_portrait-star">放星星</div>
+												<div class="cx_portrait-flex">2010-10-10</div>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox18" id="checkbox18" value=""/><label for="checkbox18">
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+									<div class="cx_portrait-info cx_portrait-line">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+												<div class="cx_portrait-flower">放小花</div>
+												<div class="cx_portrait-star">放星星</div>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+										<dl class="cx_portrait-right">
+											<dt>06'25"</dt>
+											<dd>北京</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox18" id="checkbox18" value=""/><label for="checkbox18">
+								<div class="cx_portrait-row cx_portrait-line">
+									<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+									<div class="cx_portrait-info">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+												<div class="cx_portrait-flower">放小花</div>
+												<div class="cx_portrait-star">放星星</div>
+											</dt>
+											<dd class="cx_portrait-tt">学号:1958545</dd>
+										</dl>
+										<!--<dl class="cx_portrait-right">
+											<dt>06'25"</dt>
+											<dd>北京</dd>
+										</dl>-->
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox18" id="checkbox18" value=""/><label for="checkbox18">
+								<div class="cx_portrait-row cx_portrait-line">
+									<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+									<div class="cx_portrait-info">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+												<div class="cx_portrait-flower">放小花</div>
+												<div class="cx_portrait-star">放星星</div>
+											</dt>
+											<!--<dd class="cx_portrait-tt">学号:1958545</dd>-->
+										</dl>
+										<dl class="cx_portrait-right">
+											<dt>06'25"</dt>
+											<dd>北京</dd>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox18" id="checkbox18" value=""/><label for="checkbox18">
+								<div class="cx_portrait-row">
+									<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+									<div class="cx_portrait-info">
+										<dl class="cx_portrait-txt">
+											<dt class="cx_portrait-align">
+												<h1 class="cx_portrait-name">柳辰飞柳辰飞柳辰飞</h1>
+												<div class="cx_portrait-flower">放小花</div>
+												<div class="cx_portrait-star">放星星</div>
+											</dt>
+											<!--<dd class="cx_portrait-tt">学号:1958545</dd>-->
+										</dl>
+										<dl class="cx_portrait-right">
+											<dt>2010-10-10</dt>
+										</dl>
+									</div>
+								</div>
+							</label>
+						</li>
+					</ul>
+					<style type="text/css">
+						/*----------------------------------------------------
+						图文横向Horizontal
+						-----------------------------------------------------*/
+						.cx_imgTextH {}
+						.cx_imgTextH-list {}
+						.cx_imgTextH-row { display: -webkit-box; padding-bottom: .2rem; border-bottom: 1px #f5f5f5 solid;}
+						.cx_imgTextH-row:last-child { border-bottom: none;}
+						.cx_imgTextH-pic { position: relative; width: 2.4rem; height: 1.34rem; overflow: hidden;}
+						.cx_imgTextH-pic img { width: 100%; height: 100%;}
+						.cx_imgTextH-tt { position: absolute; left: 0; right: 0; bottom: 0; padding-left: .2rem; padding-right: .2rem; -webkit-box-sizing: border-box; box-sizing: border-box;  width: 100%; height: .38rem; background: rgba(0, 0, 0, .5); line-height: .38rem; font-size: .2rem; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+						.cx_imgTextH-info { -webkit-box-flex: 1; padding-left: .2rem;}
+						.cx_imgTextH-h { height: 1.11rem;}
+						/*单行文字已注释
+						 * .cx_imgTextH-h h1 { width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1; vertical-align: top; font-size: .3rem; color: #5e5e5e;}*/
+						.cx_imgTextH-h h1 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 100%; height: .66rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; vertical-align: top; font-size: .26rem; color: #5e5e5e;}
+						.cx_imgTextH-h p { width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: .22rem; color: #909090;}
+						.cx_imgTextH-txt { -webkit-box-pack: end; line-height: .22rem; font-size: .22rem; color: #bababa;}
+					</style>
+					<ul class="pt-itemBox">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox19" id="checkbox19" value="" checked="checked"/><label for="checkbox19">
+								<div class="cx_imgTextH-row">
+									<div class="cx_imgTextH-pic"><img src="temp/201711271839_03.jpg"/>
+									<h2 class="cx_imgTextH-tt">让科学成为未来中国科学</h2>
+									</div>
+									<dl class="cx_imgTextH-info">
+										<dt class="cx_imgTextH-h">
+											<h1>让科学成为未来中国科学成为未来中国科学成为未来中国的文化中国国</h1>
+											<p>金晓峰 复旦大学教授</p>
+										</dt>
+										<dd class="cx_imgTextH-txt">
+											27′22″&nbsp;&nbsp;| 12345人观看
+										</dd>
+									</dl>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox20" id="checkbox20" value=""/><label for="checkbox20">
+								<div class="cx_imgTextH-row">
+									<div class="cx_imgTextH-pic"><img src="temp/201711271839_03.jpg"/>
+									<h2 class="cx_imgTextH-tt">让科学成为未来中国科学</h2>
+									</div>
+									<dl class="cx_imgTextH-info">
+										<dt class="cx_imgTextH-h">
+											<h1>让科学成为未来中国的文化中国国</h1>
+											<p>金晓峰 复旦大学教授</p>
+										</dt>
+										<dd class="cx_imgTextH-txt">
+											27′22″&nbsp;&nbsp;| 12345人观看
+										</dd>
+									</dl>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox21" id="checkbox21" value=""/><label for="checkbox21">
+								<div class="cx_imgTextH-row">
+									<div class="cx_imgTextH-pic"><img src="temp/201711271839_03.jpg"/></div>
+									<dl class="cx_imgTextH-info">
+										<dt class="cx_imgTextH-h">
+											<h1>让科学成为未来</h1>
+											<p>金晓峰 复旦大学教授</p>
+										</dt>
+										<dd class="cx_imgTextH-txt">
+											27′22″&nbsp;&nbsp;| 12345人观看
+										</dd>
+									</dl>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox22" id="checkbox22" value=""/><label for="checkbox22">
+								<div class="cx_imgTextH-row">
+									<div class="cx_imgTextH-pic"><img src="temp/201711271839_03.jpg"/></div>
+									<dl class="cx_imgTextH-info">
+										<dt class="cx_imgTextH-h">
+											<h1>让科学成为未来</h1>
+										</dt>
+										<dd class="cx_imgTextH-txt">
+											27′22″&nbsp;&nbsp;| 12345人观看
+										</dd>
+									</dl>
+								</div>
+							</label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox23" id="checkbox23" value=""/><label for="checkbox23">
+								<div class="cx_imgTextH-row">
+									<div class="cx_imgTextH-pic"><img src="temp/201711271839_03.jpg"/></div>
+									<dl class="cx_imgTextH-info">
+										<dt class="cx_imgTextH-h">
+											<h1>让科学成为未来</h1>
+											<p>金晓峰 复旦大学教授</p>
+										</dt>
+									</dl>
+								</div>
+							</label>
+						</li>
+					</ul>
+					<ul class="pt-itemHor">
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox24" id="checkbox24" value="" checked="checked"/><label for="checkbox24" class="cx_checkbox-style">A </label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox25" id="checkbox25" value=""/><label for="checkbox25" class="cx_checkbox-style">B </label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox26" id="checkbox26" value=""/><label for="checkbox26" class="cx_checkbox-style">C </label>
+						</li>
+						<li class="cx_checkbox">
+							<input type="checkbox" name="checkbox27" id="checkbox27" value=""/><label for="checkbox27" class="cx_checkbox-style">D </label>
+						</li>
+					</ul>
+					<ul class="pt-itemHor">
+						<li class="cx_radio">
+							<input type="radio" name="radio3" id="radio28" value="" checked="checked"/><label for="radio28" class="cx_radio-style">E </label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio3" id="radio29" value=""/><label for="radio29" class="cx_radio-style">F </label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio3" id="radio30" value=""/><label for="radio30" class="cx_radio-style">G </label>
+						</li>
+						<li class="cx_radio">
+							<input type="radio" name="radio3" id="radio31" value=""/><label for="radio31" class="cx_radio-style">H </label>
+						</li>
+					</ul>
+				</div>
+				
+				
+				<style type="text/css">
+					.cx_fieldList-row  {}
+					.cx_fieldList-row .cx_checkbox,
+					.cx_fieldList-row .cx_radio { padding: 0;}
+					.cx_fieldList-row .cx_checkbox input[type='checkbox']:after,
+					.cx_fieldList-row .cx_checkbox input[type='checkbox']:checked:after,
+					.cx_fieldList-row .cx_radio input[type='radio']:after,
+					.cx_fieldList-row .cx_radio input[type='radio']:checked:after { margin-top: .28rem; margin-left: .3rem; }
+				</style>
+				<ul class="cx_fieldList-group">
+					<li class="cx_fieldList-row">
+						<div class="cx_radio">
+							<input type="radio" name="radio4" id="radio32" value=""/><label for="radio32">
+								<dl class="cx_fieldList-field cx_fieldList-line">
+									<dt class="cx_fieldList-key cx_fieldList-flex">评价方式</dt>
+									<dd class="cx_fieldList-val cx_fieldList-arrow">教师评价，指定人员评价</dd>
+								</dl>
+							</label>
+						</div>
+					</li>
+					<li class="cx_fieldList-row">
+						<div class="cx_radio">
+							<input type="radio" name="radio4" id="radio33" value=""/><label for="radio33">
+								<dl class="cx_fieldList-field cx_fieldList-line">
+									<dt class="cx_fieldList-key cx_fieldList-flex">评价方式</dt>
+								</dl>
+							</label>
+						</div>
+					</li>
+					<li class="cx_fieldList-row">
+						<dl class="cx_fieldList-field cx_fieldList-line">
+							<dt class="cx_fieldList-key cx_fieldList-flex">评价方式</dt>
+							<dd class="cx_fieldList-val cx_fieldList-arrow">教师评价，指定人员评价</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="cx_fieldList-group">
+					<li class="cx_fieldList-row">
+						<div class="cx_checkbox">
+							<input type="checkbox" name="checkbox34" id="checkbox34" value=""/><label for="checkbox34">
+								<dl class="cx_fieldList-field cx_fieldList-line">
+									<dt class="cx_fieldList-key cx_fieldList-flex">评价方式</dt>
+									<dd class="cx_fieldList-val cx_fieldList-arrow">教师评价，指定人员评价</dd>
+								</dl>
+							</label>
+						</div>
+					</li>
+					<li class="cx_fieldList-row">
+						<div class="cx_checkbox">
+							<input type="checkbox" name="checkbox35" id="checkbox35" value=""/><label for="checkbox35">
+								<dl class="cx_fieldList-field cx_fieldList-line">
+									<dt class="cx_fieldList-key cx_fieldList-flex">评价方式</dt>
+								</dl>
+							</label>
+						</div>
+					</li>
+					<li class="cx_fieldList-row">
+						<dl class="cx_fieldList-field cx_fieldList-line">
+							<dt class="cx_fieldList-key cx_fieldList-flex">评价方式</dt>
+							<dd class="cx_fieldList-val cx_fieldList-arrow">教师评价，指定人员评价</dd>
+						</dl>
+					</li>
+				</ul>
+				<div class="cx_fieldList-group">
+					<dl class="cx_fieldList-field cx_fieldList-line">
+						<dt class="cx_fieldList-key cx_fieldList-flex">允许学生查看统计</dt>
+						<dd class="cx_fieldList-val"><label><input class="cx_switch cx_switch-animbg cx_switch-anim" type="checkbox" checked></label></dd>
+					</dl>
+					<dl class="cx_fieldList-field">
+						<dt class="cx_fieldList-flex">评价方式</dt>
+						<dd class="cx_fieldList-arrow">教师评价，指定人员评价</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		
+	</body>
+</html>

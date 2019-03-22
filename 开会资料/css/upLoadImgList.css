@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+.cx_upLoadImgList { border-bottom: 1px #ebebeb solid; border-top:1px #ebebeb solid; background: #fff;}
+/*----------------------------------------------------
+单行文本输入
+-----------------------------------------------------*/
+.cx_upLoadImg-input { display: -webkit-box; display: box; width: 100%; padding: 0.234rem 0; padding-top: 0; box-sizing: border-box;}
+.cx_upLoadImg-typeText { -webkit-box-flex: 1; height: 0.8775rem; padding-left: 0.3rem; -webkit-transiton:0.6s all ease; border-bottom: 1px #ebebeb solid; border-top:1px #ebebeb solid; background: #fff;}
+.cx_upLoadImg-typeText input { width: 100%; height: 0.8775rem; border: none; border-radius: 0; -webkit-box-sizing: border-box; box-sizing: border-box; background: #fff; line-height: none; line-height: normal; font-size: 0.351rem; color: #333;} 
+.cx_upLoadImg-typeText input::-webkit-input-placeholder { font-size: 0.3042rem;}
+.cx_upLoadImg-tt { height: 0.8775rem; border-bottom: 1px #ebebeb solid; border-top:1px #ebebeb solid;  background: #fff; line-height: 0.8775rem; font-size:0.351rem; color: #999;}
+
+.cx_cameraBtn {  -webkit-transiton:1.6s all ease; width: 1.1232rem; padding-left: 0.1404rem; padding-right: 0.234rem; height: 0.8775rem; border-bottom: 1px #ebebeb solid; border-top:1px #ebebeb solid;  background: #fff; text-align: right;}
+.cx_cameraBtn span { display: inline-block; width: 0.819rem; height: 0.819rem; background: url(../images/camera_03.png) no-repeat; background-position: center; background-size: 0.5616rem; line-height: 0.819rem; font-size: 0.3rem; color: #09f;-webkit-filter: grayscale(1); filter: grayscale(1);}
+
+.cx_addBtn { padding-left: 0.1404rem; padding-right: 0.234rem; height: 0.8775rem; border-bottom: 1px #ebebeb solid; border-top:1px #ebebeb solid;  background: #fff; text-align: right;}
+.cx_addBtn span { display: block; width: 0.468rem; height: 0.468rem; margin-top: 0.2223rem; background: url(../images/add_32.png) no-repeat; background-size: 0.3744rem;}
+
+
+
+/*----------------------------------------------------
+多行文本输入
+-----------------------------------------------------*/
+.cx_upLoadImgList-textarea {}
+.cx_upLoadImgList-contenteditable textarea {-webkit-appearance: none; width: 100%; min-height: 1.404rem; padding:0.0936rem 0.3rem 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: none; border-radius: 0; outline: none; background: #fff; line-height: 0.585rem; font-size: 0.32rem; color: #333;}
+
+/*上传图片按钮浮在输入框上*/
+.cx_cameraBtn1 { position: relative; width: 100%; height: 0; -webkit-filter: grayscale(1); filter: grayscale(1);}
+.cx_cameraBtn1 span { position: absolute; right: 0.234rem; top: -0.7371rem; width: 0.702rem; height: 0.702rem; background: url(../images/camera_03.png) no-repeat; background-position: center; background-size: 0.5616rem; -webkit-filter: grayscale(1); filter: grayscale(1);}
+/*带标题*/
+.cx_upLoadImgList-intitle { padding: 0.1872rem 0; padding-bottom: 0; }
+.cx_upLoadImgList-intitle h2 { padding:0.1404rem 0.3rem 0.1521rem 0.3rem; line-height: 1.4; font-size: 0.32rem; color: #333; word-wrap:break-word;	word-break:break-all;}
+.cx_upLoadImgList-intitle h2 span { color: #999;}
+/*上传后图片列表*/
+.cx_upLoadImgList-img,.cx_upLoadImgList-img1 { padding:0 0.3rem;}
+.cx_upLoadImgList-img1 { border-bottom: 1px #ebebeb solid;}
+.cx_upLoadImgList-imgList { padding: 0.117rem 0 0 0;}
+.cx_upLoadImgList-rel { position: relative; display: inline-block; letter-spaceing:-0.0468rem; width: 1.18rem; height: 1.18rem; margin-bottom: 0.26rem; margin-right: 0.4563rem;}
+.cx_upLoadImgList-view { display: inline-block;  overflow: hidden; width: 1.18rem; height: 1.18rem; border-radius: 0.0936rem;}
+.cx_upLoadImgList-close { position: absolute; right: -0.22rem; top: -0.22rem; width: 0.44rem; height: 0.44rem; background: url(../images/delete_06.png) center no-repeat; background-size: .42rem; z-index: 10;}
+.cx_upLoadImgList-addImg { display: inline-block; letter-spaceing:-0.0468rem; width: 1.18rem; height: 1.18rem; margin-bottom: 0.26rem; border:1px #ebebeb solid; border-radius: .08rem; background: url(../images/add_03.png) center no-repeat; background-size: 0.6rem; vertical-align: top;}
+.cx_upLoadImgList-addImg:first-child { background-image: url(../images/cameraicon.png); border: none; }
+.cx_upLoadImgList-h { padding: 0 0.3rem 0.0234rem; line-height: 0.3744rem; font-size: 0.32rem; color: #999;}
+
+
+
+/*----------------------------------------------------
+图片展示列表
+-----------------------------------------------------*/
+.cx_imgList { border-bottom: 1px #ebebeb solid; background-color: #fff;}
+/*标题*/
+.cx_imgList-header { padding: 0.3rem 0.3rem;}
+.cx_imgList-header h2 { line-height: 1.5; font-size: 0.32rem; color: #333;}
+/*图片列表*/
+.cx_imgList-box { padding-bottom: 0.3rem; margin-left: 0rem;}
+.cx_imgList-item { width: 1.94rem; height: 1.94rem; margin-right: .1rem;}
+.cx_imgList-item:first-child { margin-left: .3rem;}
+.cx_imgList-item:last-child { margin-right: .3rem;}
+.cx_imgList-bg { position: relative; width: 100%; height: 100%; overflow: hidden;}
+.cx_imgList-img { height: 100%;}
+.cx_imgList-img img { }
+.cx_imgList-imgw100 img { width: 100%; display: inline-block;}
+.cx_imgList-imgh100 img { height: 100%; display: inline-block;}
+.cx_imgList-th { position: absolute; left: 0; bottom:0; width:97.5%; padding-left: 2.5%; height: 20px; background: rgba(0,0,0,0.4); color: #fff; font-size: 12px; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}

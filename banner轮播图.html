@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>swiper banner图滚动</title>
+		<link rel="stylesheet" type="text/css" href="css/cxUniter.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<script src="js/ratio.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="cx_banner">
+			<div class="swiper-container" id="zbanner">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="temp/Group_5.png"/></div>
+			        <div class="swiper-slide"><img src="temp/Group_5.png"/></div>
+			        <div class="swiper-slide"><img src="temp/Group_5.png"/></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<style type="text/css">
+			.zmain { overflow: hidden;}
+			/*----------------------------------------------------
+			banner
+			-----------------------------------------------------*/
+			.cx_banner { position: relative; height: 2.48rem; background: #ccc; overflow: hidden;}
+			/*.cx_banner:before { position: absolute; content: ''; left: 50%; bottom: -1.8rem; margin-left: -65%; width: 130%; height: 2.2rem; border-radius: 50% 50% 0 0; background: #fff; z-index: 10;}*/
+			.cx_banner .swiper-container,
+			.cx_banner .swiper-wrapper,
+			.cx_banner .swiper-slide { height: 100%; width: 100%;}
+			.cx_banner .swiper-slide a { display: block; width: 100%; height: 100%;}
+			.cx_banner .swiper-slide img { width: 100%; height: 100%;}
+			.cx_banner .swiper-container-horizontal> .swiper-pagination .swiper-pagination-bullet { margin-left: .1rem; margin-right: .1rem;}
+			.cx_banner .swiper-pagination-bullet { width: .12rem; height: .12rem; display: inline-block; border-radius: 100%; background: #000; opacity: 0.3;}
+			.cx_banner .swiper-pagination-bullet-active { background-color: #fff}
+		</style>
+		<script type="text/javascript">
+			new Swiper('#zbanner', {
+				pagination: '.swiper-pagination'
+			})
+		</script>
+	</body>
+</html>

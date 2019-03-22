@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>底部弹层</title>
+		<link rel="stylesheet" type="text/css" href="css/cxUniter.css" />
+		<link rel="stylesheet" type="text/css" href="css/button.css" />
+		<link rel="stylesheet" type="text/css" href="css/bottomMenu.css"/>
+		<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ratio.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cx_layer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.cx_opacity { opacity: 1; display: none;}
+		</style>
+	</head>
+
+	<body class="zbggray">
+		<header class="cx_header">
+			<div class="cx_header-box">
+				<h1 class="cx_header-title">学习通</h1>
+				<div class="cx_header-link">
+					<div class="cx_header-body">
+						<a class="cx_header-arrow" href="#"></a>
+						<a class="cx_header-left" href="#">确定</a>
+						<p class="cx_header-flex"></p>
+						<a class="cx_header-right" href="#">取消</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="cx_btn">
+			<p class="cx_btn-go">
+				<a id="cx_selectVideo" href="#">添加图片</a>
+			</p>
+		</div>
+		<!--<div class="zbox_bottom">-->
+			<div class="cx_opacity" id="cx_opacity"></div>
+			<div class="cx_bottomMenu-site animated" id="cx_bottomMenu_site">
+				<div class="cx_bottomMenu-itembox">
+					<p class="cx_bottomMenu-row">
+						<a href="#">从相册选择</a>
+					</p>
+					<p class="cx_bottomMenu-row">
+						<a href="#">拍摄</a>
+					</p>
+					<p class="cx_bottomMenu-row">
+						<a href="#">从我的收藏选择</a>
+					</p>
+				</div>
+				<a class="cx_bottomMenu-closebtn" id="cx_bottomMenu_closebtn" href="#">取消</a>
+			</div>
+			<!--添加发放对象 end-->
+		<!--</div>-->
+		<script type="text/javascript">
+			//触发底部菜单
+			$("#cx_selectVideo").click(function() {
+				openlayer("#cx_bottomMenu_site", "#cx_opacity");
+			});
+			//关闭按钮
+			$("#cx_bottomMenu_closebtn").click(function() {
+				closelayer("#cx_bottomMenu_site", "#cx_opacity");
+			});
+		</script>
+	</body>
+
+</html>

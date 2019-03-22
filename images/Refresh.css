@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+/*-----------------------------------------------------
+refreshing
+-----------------------------------------------------*/
+#pushDown { padding: 0; margin: 0; height: 42px; margin-top: -42px;}
+.zrefresh { display: -webkit-box; -webkit-box-align: center; -webkit-box-pack: center; text-align: center;}
+.zrefresh .refresh_btn { color: #929292; font-size: 14px;}
+.zrefresh .refresh_btn a { line-height: 40px; color: #929292;}
+.zrefresh .refresh_text { height: 40px; padding-left: 6px; line-height: 40px; font-size: 14px; text-align: center; color: #b3b3b3;}
+.zrefresh .refreshIcon { margin: 0.2rem; width: 1.5rem; height: 1.5rem; background: url(Refresh@2x.png) center no-repeat; background-size: 1.4rem; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;}
+.zrefresh .refreshIcon180 { -webkit-transform: rotate(180deg); transform: rotate(180deg);}
+.zrefresh .refreshing { width: 1.5rem; height: 1.5rem; margin: 0.2rem; background: url(refreshLoading.png) center center no-repeat; background-size: 1.5rem; -webkit-animation: ccircle 2.8s infinite linear; animation: ccircle 2.8s infinite linear; /*-webkit-animation-play-state: paused; animation-play-state: paused;*/ }
+/*.zrefresh .refreshing,
+.zrefresh .refreshing:after { border-radius: 50%; width: 1rem; height: 1rem; }*/
+@-webkit-keyframes ccircle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes ccircle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.zrefresh .zrunning { -webkit-animation-play-state: running; animation-play-state: running; }
+.zanimate { -webkit-transition:margin-top ease 0.4s; transition:all ease 0.4s;}
+
+
+
+
+
+
+
+
+
+

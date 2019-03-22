@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>左右滑动选集</title>
+		<link rel="stylesheet" type="text/css" href="../css/cxUniter.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ratio.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="zvideoDir">
+			<header class="zvideoDir-header">
+				<div class="zvideoDir-title">
+					<h1>选集播放</h1>
+					<p>共5集</p>
+				</div>
+			</header>
+			<section class="zvideoDir-body">
+				<div class="swiper-container swiper-container-horizontal" id="zvideoDir-js">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide zvideoDir-slide zvideoDir-cur swiper-slide-active">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因东奔西走大规模在顶戴压顶村（一）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide swiper-slide-next">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+				        	<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（二）</h2>
+				        		<p># 19'23"</p>
+			        		</div>
+				        </div>
+				        <div class="swiper-slide zvideoDir-slide">
+			        		<div class="zvideoDir-item">
+				        		<h2>让科学成为未来中国的文化基因（三）</h2>
+				        		<p># 19'23"</p>
+					        </div>
+				        </div>
+				    </div>
+				</div>
+			</section>
+		</div>
+		<style type="text/css">
+			/*选集播放*/
+			.zvideoDir { border-top: 1px #f5f5f5 solid;}
+			.zvideoDir-header { padding: .3rem; padding-bottom: .18rem;}
+			.zvideoDir-title { display: -webkit-box; -webkit-box-align: center;}
+			.zvideoDir-title h1 { -webkit-box-flex: 1; line-height: 1; font-size: .32rem; color: #2f2f2f;}
+			.zvideoDir-title p { line-height: 1; font-size: .26rem; color: #909090;}
+			.zvideoDir-body { padding-bottom: .3rem; padding-left: .1rem;}
+			.zvideoDir-slide { width: 3.33rem; height: 1.43rem;}
+			.zvideoDir-item { width: 3.1rem; height: 1.4rem; margin-left: .2rem; padding-top: .1rem;  padding-left: .18rem; padding-right: .18rem; border: 1px #f5f5f5 solid; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #f5f5f5;}
+			.zvideoDir-item h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; height: 0.92rem; line-height: .44rem; font-size: .26rem;}
+			.zvideoDir-item p { line-height: 1; font-size: .22rem; color: #909090;}
+			.zvideoDir-cur .zvideoDir-item { border: 1px #09f solid;}
+			.zvideoDir-cur .zvideoDir-item h2 { font-size: .26rem; color: #09f;}
+			.zvideoDir-cur .zvideoDir-item p { font-size: .22rem;}
+			.zvideoDir- {}
+		</style>
+		<script type="text/javascript">
+			var videoDir = new Swiper('#zvideoDir-js', {
+		    	scrollbarHide: true,
+		        slidesPerView: 'auto'
+		    });
+		</script>
+	</body>
+</html>

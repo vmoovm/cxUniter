@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>移动</title>
+<link href="css/cxUniter.css" rel="stylesheet" type="text/css" />
+<link href="css/alert.css" rel="stylesheet" type="text/css" />
+<script src="js/ratio.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<header class="cx_header">
+		<div class="cx_header-box">
+			<h1 class="cx_header-title">学习通</h1>
+			<div class="cx_header-link">
+				<div class="cx_header-body">
+					<a class="cx_header-arrow" href="#"></a>
+					<a class="cx_header-left" href="#">确定</a>
+					<p class="cx_header-flex"></p>
+					<a class="cx_header-right" href="#">取消</a>
+				</div>
+			</div>
+		</div>
+	</header>
+<!--main start-->
+<div class="zmain">
+	<input class="zlo_danwei" type="text" name="" id="danwei" value="" placeholder="学校／单位" />
+</div>
+<!--main end-->
+<!--alert start-->
+<article class="zal_bg" id="zal_bg">
+	<span>邮箱格式不正确</span>
+</article>
+<!--alert end-->
+<script type="text/javascript">
+		
+		
+		function parseToDOM(str){
+		   var div = document.createElement("div");
+		   if(typeof str == "string")
+		       div.innerHTML = str;
+		   return div.childNodes;
+		}
+		var infos = [];
+		var htmls = [];
+		var dsd = [];
+		
+		
+		//递归获取尺寸
+		function _getSize (n,now) {
+			self.imgSize[n].w = self.imgObj[n].width;
+			self.imgSize[n].h = self.imgObj[n].height;
+			if (self.imgSize[n].w > 0 && (self.imgObj[n].complete || self.imgObj[n].onload)) {
+				if (self.clear[n]) clearInterval(self.clear[n]);
+				if (self.config.wrapSize.w/self.config.wrapSize.h > self.imgSize[n].w/self.imgSize[n].h) {
+					self.imgArray[n].parentElement.classList.add(self.config.imgSizeClass.wc);
+					var h = Math.floor((self.config.wrapSize.w/self.imgSize[n].w*self.imgSize[n].h-self.config.wrapSize.h)/2)*-1
+					self.imgArray[n].style.marginTop = h + 'px';
+				} else {
+					self.imgArray[n].parentElement.classList.add(self.config.imgSizeClass.hc);
+					var w = Math.floor((self.config.wrapSize.h/self.imgSize[n].h*self.imgSize[n].w-self.config.wrapSize.w)/2)*-1
+					self.imgArray[n].style.marginLeft = w + 'px';
+				}
+				_loop(n+=1);
+			}
+			// 超时处理
+			if ((new Date() * 1 - now) > 1500) {
+				if (self.clear[n]) clearInterval(self.clear[n]);
+				_loop(n+=1);
+			}
+		}
+		
+		
+		// 递归初始化
+		// function _loop (i) {
+			// var now = new Date() * 1;
+			// this.running = true;
+			// if (i < self.imgArray.length){
+				// self.imgSize[i] = {w:0,h:0};
+				// self.imgObj[i] = new Image();
+				// self.imgObj[i].src = self.imgArray[i].getAttribute('src');
+				// if (self.clear[i]) clearInterval(self.clear[i]);
+				// self.clear[i] = setInterval(function(){
+					// _getSize(i, now);
+				// },10);
+			// } else {
+				// this.running = false;
+				// return;
+			// }
+		// }
+		// 递归初始化
+		function _loop(i) {
+			var now = new Date() *1;
+			running = true;
+			if (i < infos.length) {
+				html[i] = '<article class="zal_bg"><span>' + infos[i] + '</span></article>';
+				dsd[i] = parseToDOM(html[i]);
+				for(var i = 0; i < dsd[i].length; i++) {
+					for(var j = 0; j < dsd[i].length; j++) {
+						var a = dsd[i][j].cloneNode(true);
+						document.getElementsByTagName('body')[0].appendChild(a)
+					}
+					dsd[i].classList.remove('zend');
+					dsd[i].classList.add('zstart');
+				}
+				
+			} else {
+				running = false;
+				return;
+			}
+		}
+		
+		
+		/**
+		 * 黑框提示
+		 * @param {String} info 字符串信息，必填
+		 * @param {Number} n 整数，选填
+		 * @param {String} ele字符串形式，元素id，选填
+		 * @example例： waring('邮箱格式不正确', 2, “#zal_bg”)。
+		 * 
+		 * */
+		function waring(info, times){
+			infos = push({
+				info:info,
+				times: times
+			});
+			if (!(running) && infos[0] != null) {
+				_loop (0);
+			} else {}
+			
+			
+			// var ele = ele || '#zal_bg';
+			// zclear && clearInterval(zclear);
+			var html = '<article class="zal_bg" id="zal_bg"><span>' + info + '</span></article>'
+			var dsd = parseToDOM(html);
+			for(var i = 0; i < dsd.length; i++) {
+				var a = dsd[i].cloneNode(true);
+				document.getElementsByTagName('body')[0].appendChild(a)
+			}
+			var ele = document.querySelector(ele);
+			ele.classList.remove('zend');
+			ele.classList.add('zstart');
+			
+			var zclear=setInterval(function(){
+				ele.classList.remove('zstart');
+				ele.classList.add('zend');
+				ele.addEventListener("animationstart", function() {
+					
+				}, false);
+	    		ele.addEventListener("animationend", function() {
+	    			
+					document.getElementsByTagName('body')[0].removeChild(ele);
+					clearInterval(zclear);
+	    		}, false);
+			},1000);
+		}
+		
+		document.querySelector("#danwei").addEventListener('blur', function() {
+			waring("邮箱格式不正确",1);
+		})
+	</script>
+	<script type="text/javascript">
+		// function parseToDOM(str){
+		   // var div = document.createElement("div");
+		   // if(typeof str == "string")
+		       // div.innerHTML = str;
+		   // return div.childNodes;
+		// }
+		// var sd = '<li>1</li> <li>2</li> <li>3</li> <li>4</li>   <li>5</li>  '
+		// var dsd = []
+		// dsd = parseToDOM(sd)
+		// var test = document.getElementById('inner')
+		// for(var i = 0; i < dsd.length; i++) {
+			// var a = dsd[i].cloneNode(true);
+			// test.appendChild(a)
+		// }
+		
+		
+		// function prompt(title,second){
+			// $("<article class='zal_bg' style='opacity:1'><span>"+title+"</span></article>").appendTo($(document.body)).fadeOut(second*1000,function(){
+				// $(this).remove();
+			// });
+		// }
+		// prompt('邮箱格式不正确',1)
+	</script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" /> 
+<title>IOS滚轮效果自定义内容</title>
+<link href="../css/cxUniter.css" rel="stylesheet" type="text/css" />
+<link href="../css/portrait.css" rel="stylesheet" type="text/css" />
+<link href="../css/iosSelectRem.css" rel="stylesheet" type="text/css" />
+<script src="../js/ratio.js" type="text/javascript"></script>
+<script src="../js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/iosSelectRem.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body class="zbgwh">
+<!--main start-->
+	<div class="cx_box">
+		<header class="cx_header">
+			<div class="cx_header-box">
+				<h1 class="cx_header-title">学习通</h1>
+				<div class="cx_header-link">
+					<div class="cx_header-body">
+						<a class="cx_header-arrow" href="#"></a>
+						<a class="cx_header-left" href="#">确定</a>
+						<p class="cx_header-flex"></p>
+						<a class="cx_header-right" href="#">取消</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="cx_box-content">
+			<div class="cx_portrait">
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-pic"><img src="../temp/201709271849_03.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>-->
+								<!--<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">201219132001</dd>
+						</dl>
+						<div class="cx_portrait-right cx_portrait-arrowd cx_portrait-blue zpo-fs cx_portrait-js"><span>8</span><span>分</span></div>
+					</div>
+				</div>
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-pic"><span><em></em></span><img src="../temp/201709271849_03.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>-->
+								<!--<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">201219132001</dd>
+						</dl>
+						<div class="cx_portrait-right cx_portrait-arrowd cx_portrait-blue zpo-fs cx_portrait-js"><span>10</span><span>分</span></div>
+					</div>
+				</div>
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-pic"><span><em></em></span><img src="../temp/20160104162001.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>-->
+								<!--<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">201219132001</dd>
+						</dl>
+						<div class="cx_portrait-right cx_portrait-arrowd cx_portrait-blue zpo-fs cx_portrait-js"><span>0</span><span>分</span></div>
+					</div>
+				</div>
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-pic"><span><em></em></span><img src="../temp/201709271849_03.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>-->
+								<!--<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">201219132001</dd>
+						</dl>
+						<div class="cx_portrait-right cx_portrait-arrowd cx_portrait-blue zpo-fs cx_portrait-js"><span>2</span><span>分</span></div>
+					</div>
+				</div>
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-pic"><span><em></em></span><img src="../temp/20160104162001.png" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>-->
+								<!--<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">201219132001</dd>
+						</dl>
+						<div class="cx_portrait-right cx_portrait-arrowd cx_portrait-blue zpo-fs cx_portrait-js"><span>9</span><span>分</span></div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class="zbox_bottom"></div>
+	</div>
+	
+<!--main end-->
+<script type="text/javascript">
+    // 分数
+    var selectScoreDom = [];
+    var showScoreDom = [];
+    
+    $(".cx_portrait-js").each(function(){
+    	selectScoreDom.push($(this))
+    	showScoreDom.push($(this).children('span:first'))
+    })
+    
+    // 数据初始化
+    var minScore="-10", maxScore="10";
+    var scoreData = function(callback) {
+        var arr = [];
+        for (var i = minScore; i <= maxScore; i++) {
+            arr.push({
+                id: i + '',
+                value: i + ''
+            });
+        }
+        callback(arr)
+    }
+    $.each(selectScoreDom,function(key,val){
+        console.log(val);
+    	val.bind('click', function () {
+    	    var that = $(this).children('span:first');
+    	    var iosSelect = new IosSelect(1,
+    	        [scoreData],
+    	        {
+    	            title: '选择积分',
+    	            itemHeight: 0.6786,
+	                headerHeight:0.819,
+	                unitHeight: .4,
+	                relation: [1, 0, 0, 0],
+	                cssUnit:'rem',
+	                itemShowCount: 7,
+    	            oneLevelId: that.attr('data-score'),
+    	            callback: function (selectOneObj) {
+    	                that.attr('data-score', selectOneObj.id);
+    	                that.html(selectOneObj.value);
+    	            }
+    	    });
+    	});
+    })
+    
+</script>
+</body>
+</html>

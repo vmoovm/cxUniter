@@ -1,0 +1,38 @@
+.cx_fieldList { margin-top: 0.234rem; border-top: solid 1px #d8dde4; border-bottom: solid 1px #d8dde4; background: #fff;}
+/*----------------------------------------------------
+list列表对
+-----------------------------------------------------*/
+.cx_fieldList-group { background-image:-webkit-linear-gradient(#ebebeb 70%,transparent 30%),-webkit-linear-gradient(transparent 40%,#ebebeb 60% ); background-image:linear-gradient(#ebebeb 60%,transparent 40%),linear-gradient(transparent 40%,#ebebeb 60% ); background-size: 100% 1px; background-position: top,bottom; background-image:-webkit-linear-gradient(#ebebeb 60%,transparent 40%),-webkit-linear-gradient(transparent 40%,#ebebeb 60% ); background-size: 100% 1px; background-position: top,bottom; background-repeat: no-repeat;  background-color: #fff; font-size: 0.3rem;}
+.cx_fieldList-arrow { display: block; padding-right: .3rem;  background: url(../images/arrow.png) right center no-repeat; background-size: .28rem; line-height: 1rem; color: #333;}
+.cx_fieldList-field { display: -webkit-box; -webkit-box-pack: justify; margin: 0 0.3rem; /*padding: 0 0.234rem;*/ background-image:-webkit-linear-gradient(transparent 30%,#ebebeb 70% ); background-image:linear-gradient(transparent 30%,#ebebeb 70% ); background-size: 100% 1px; background-position: bottom; background-repeat: no-repeat; line-height: 0.8775rem;}
+.cx_fieldList-field dt { font-size: .32rem; color: #333;}
+.cx_fieldList-field dd { color: #999; text-align: right;}
+.cx_fieldList-field dd .zblue { color: #09f;}
+.cx_fieldList-zompany { -webkit-box-flex:1; display: -webkit-box; height: 0.8775rem;}
+.cx_fieldList-zompany p { width: 0.936rem; height: 0.585rem; margin-top: 0.117rem; border:1px #09f solid; border-radius: 0.0936rem; background: #09f; line-height: 0.585rem; text-align: center; color: #fff; font-size: .32rem;}
+.cx_fieldList-ptop { padding-top: 0.1872rem;}
+.cx_fieldList-field:last-child { border-bottom: none;}
+.cx_fieldList-flex { -webkit-box-flex:1; display: -webkit-box; -webkit-box-orient:vertical; -webkit-box-pack:center; padding-bottom: 1px;}
+.cx_fieldList-flex input { width: 100%; border: none; background: none; font-size: 0.3159rem;}
+.cx_fieldList-space { padding-left: 0.234rem;}
+
+/*----------------------------------------------------
+选中状态 
+-----------------------------------------------------*/
+.cx_fieldList-form { padding-left: .3rem; padding-top: 1px; padding-bottom: 1px; background-image:-webkit-linear-gradient(#ebebeb 70%,transparent 30%),-webkit-linear-gradient(transparent 40%,#ebebeb 60% ); background-image:linear-gradient(#ebebeb 60%,transparent 40%),linear-gradient(transparent 40%,#ebebeb 60% ); background-size: 100% 1px; background-position: top,bottom; background-image:-webkit-linear-gradient(#ebebeb 60%,transparent 40%),-webkit-linear-gradient(transparent 40%,#ebebeb 60% ); background-size: 100% 1px; background-position: top,bottom; background-repeat: no-repeat;  background-color: #fff; font-size: 0.3rem;}
+.cx_fieldList-row { display: -webkit-box; padding: 0.2rem 0rem; padding-right: .3rem; background-image: -webkit-linear-gradient(transparent 50%, #ebebeb 50%); background-size: 100% 1px; background-repeat: no-repeat; background-position: bottom; background-color: #fff; line-height: 0.6rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.cx_fieldList-row:last-child {background: #fff;}
+.cx_fieldList-row dt { font-size: 0.32rem; color: #333;}
+.cx_fieldList-row dd { -webkit-box-flex: 1; color: #1785fb; font-size: 0.32rem;}
+.cx_fieldList-row dd { box-sizing: border-box; -webkit-box-sizing: border-box; text-align: right;}
+.cx_fieldList-row dd a { color: #09f;}
+.cx_fieldList-row dd span,.cx_fieldList-row dd input { vertical-align: middle;}
+.cx_fieldList-check { padding-left: 0.1638rem;}
+.cx_fieldList-check input { position: relative; width: 1px; height: 1px; margin-right: 0.3393rem;}
+.cx_fieldList-check input:after { content: ''; position: absolute; left: -0.1638rem; top: -0.2106rem; width: 0.468rem; height: 0.468rem; background: url(../images/radio_check.png) no-repeat; background-size: 0.4212rem;}
+.cx_fieldList-check input:checked:after { background-image: url(../images/circle_checked.png);}
+
+.cx_fieldList-radio { display: -webkit-box; -webkit-box-align: center; padding-left: 0.1638rem;}
+.cx_fieldList-radio input { position: relative; width: 1px; height: 1px; margin-right: 0.3393rem;}
+.cx_fieldList-radio input:after { content: ''; position: absolute; left: -0.1638rem; top: -0.2106rem; width: 0.468rem; height: 0.468rem; background: url(../images/radio_check.png) no-repeat; background-size: 0.4212rem;}
+.cx_fieldList-radio input:checked:after { background-image: url(../images/radio_checked.png);}

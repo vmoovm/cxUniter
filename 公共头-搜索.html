@@ -1,0 +1,54 @@
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>公共头-搜索</title>
+		<link href="css/cxUniter.css" rel="stylesheet" type="text/css" />
+		<script src="js/ratio.js" type="text/javascript"></script>
+		<style>
+			/*调试兼容iphoneX*/
+			.iph_show{ padding-top:0.33rem;}
+			@media screen and (device-width:375px) and (device-height:812px){
+			    .iph_show { padding-top:0.78rem;}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="cx_hSearch" id="cx_hSearch">
+			<span class="cx_hSearch-back"></span>
+		    <input name="" type="text" class="cx_hSearch-magnifier" id="cx_hSearch-input" placeholder="搜索">
+		    <p class="cx_hSearch-clear"></p>
+		</header>
+		<!-- 搜索页面 -->
+		<div class="cx_hSearch-history">
+			<dl>
+				<dt><h3>最近搜索</h3><span id="cx_hSearch-delete"></span></dt>
+		        <dd class="clearfix" id="cx_hSearch-list">
+		        	<a href="#">问卷</a>
+		        	<a href="#">设计</a>
+		        	<a href="#">完美生活</a>
+		        	<a href="#">设计</a>
+		        	<a href="#">古典艺术</a>
+		        </dd>
+			</dl>
+		</div>
+		<script>
+			document.getElementById("cx_hSearch-delete").addEventListener('click', function () {
+				document.getElementById("cx_hSearch-list").innerHTML = ''
+			})
+		</script>
+		
+		<script language="javascript">
+		// 调试兼容iphoneX
+		window.onload = function () {
+			if (navigator.userAgent.indexOf('iPhone') > -1) {//苹果手机
+				//alert("苹果手机");
+				document.getElementById("cx_hSearch").classList.add('iph_show');
+			} 
+		}
+		</script>
+	</body>
+</html>

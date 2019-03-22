@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>黑框提示</title>
+		<link href="css/cxUniter.css" rel="stylesheet" type="text/css" />
+		<link href="css/alert.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ratio.js" type="text/javascript"></script>
+		<style type="text/css">
+			.zmain { padding: 50px; display: -webkit-box; -webkit-box-align: center; -webkit-box-align: center;}
+			.zlo_danwei { width: 160px; height: .4rem; border: 1px #ebebeb solid; background: #fff; padding: .04rem; font-size: .26rem;}
+		</style>
+	</head>
+
+	<body>
+		<header class="cx_header">
+			<div class="cx_header-box">
+				<h1 class="cx_header-title">学习通</h1>
+				<div class="cx_header-link">
+					<div class="cx_header-body">
+						<a class="cx_header-arrow" href="#"></a>
+						<a class="cx_header-left" href="#">确定</a>
+						<p class="cx_header-flex"></p>
+						<a class="cx_header-right" href="#">取消</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<div class="zmain">
+			<input class="zlo_danwei" type="text" name="" id="danwei" value="" placeholder="学校／单位" />
+		</div>
+		
+		<!--alert start-->
+		<!--<article class="cx_alert-bg" style='display: none; opacity:1' id="cx_alert-bg">
+			<span>邮箱格式不正确</span>
+		</article>-->
+		<script type="text/javascript">
+			function prompt(title,second){
+				$("<article class='cx_alert-bg' style='opacity:1'><span>"+title+"</span></article>").appendTo($(document.body)).delay(1000*second).fadeOut(1000,function(){
+					$(this).remove();
+				});
+			}
+			
+			
+			
+			$("#danwei").blur(function(){
+				prompt('邮箱格式不正确',1)
+			})
+			// prompt('邮箱格式不正确',3)
+		</script>
+	</body>
+</html>

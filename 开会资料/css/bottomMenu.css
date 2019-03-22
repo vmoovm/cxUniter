@@ -1,0 +1,43 @@
+/*-----------------------------------------------------
+底部菜单
+-----------------------------------------------------*/
+.cx_bottomMenu {}
+.cx_bottomMenu-site { position: absolute; bottom: 0.1404rem; left: 5%; width: 90%;  -webkit-box-sizing: border-box; box-sizing: border-box;  display: none; z-index: 100;}
+a.cx_bottomMenu-closebtn { display: block; margin-top: 0.0936rem; border-radius: 0.0936rem; background: #fff; color: #c00; line-height: 1.0296rem; text-align: center; font-size: 0.351rem;}
+.cx_bottomMenu-itembox {overflow: hidden; border-radius: 0.117rem;}
+.cx_bottomMenu-row { width: 100%; border-bottom: solid 1px #d8dde4; line-height: 1.0296rem; -webkit-box-sizing: border-box; box-sizing: border-box; background: #fff; text-align: center;}
+.cx_bottomMenu-row a { display: block; color: #09f; font-size: 0.351rem;}
+
+.animated { -webkit-animation-duration: 0.25s; animation-duration: 0.25s; -webkit-animation-fill-mode:both; }
+
+
+@-webkit-keyframes fadeInUp{
+    0%{ -webkit-transform:translate(0,60px); opacity: 0;}
+    100%{ -webkit-transform:translate(0,0px);opacity: 1;}
+}
+
+@keyframes fadeInUp{
+   0%{ -webkit-transform:translate(0,60px); opacity: 0;}
+    100%{ -webkit-transform:translate(0,0px); opacity: 1;}
+}
+
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown{
+    0%{ -webkit-transform:translate(0,0px); opacity: 1;}
+    100%{ -webkit-transform:translate(0,60px);; opacity: 0;}
+}
+
+@keyframes fadeInDown{
+   0%{ -webkit-transform:translate(0,0px); opacity: 1;}
+    100%{ -webkit-transform:translate(0,60px); opacity: 0;}
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}

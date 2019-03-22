@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/cxUniter.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+		<script src="../js/ratio.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="zcai">
+			<div class="swiper-container zcai-swiper swiper-container-horizontal" id="zcai-swiper">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide swiper-slide-active" style="width: 180px;">
+			        	<div class="zcai-item">
+			        		<p class="zcai-pic"><img src="../temp/201712011113_38.jpg"></p>
+			        		<div class="zcai-howlong">
+			        			<h1>03'36''</h1>
+			        			<p>#</p>
+			        		</div>
+			        	</div>
+			        </div>
+			        <div class="swiper-slide swiper-slide-next" style="width: 180px;">
+			        	<div class="zcai-item">
+			        		<p class="zcai-pic"><img src="../temp/201712011113_38.jpg"></p>
+			        		<div class="zcai-howlong">
+			        			<h1>03'36''</h1>
+			        			<p>#</p>
+			        		</div>
+			        	</div>
+			        </div>
+			        <div class="swiper-slide" style="width: 180px;">
+			        	<div class="zcai-item">
+			        		<p class="zcai-pic"><img src="../temp/201712011113_38.jpg"></p>
+			        		<div class="zcai-howlong">
+			        			<h1>03'36''</h1>
+			        			<p>#</p>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<style type="text/css">
+			/*猜你喜欢*/
+			.zcai {}
+			.zcai-swiper { padding: .32rem 0 .4rem;}
+			.zcai-item { position: relative; margin: 0 .1rem;}
+			.zcai-pic { width: 100%;}
+			.zcai-pic img { width: 100%; min-height: 1.8rem; border-radius: .1rem;}
+			.zcai-opacity { position: absolute; left: 0; top: 0; width: 100%; height: 100%; border-radius: .1rem; background: rgba(0, 0, 0, .4);}
+			.zcai-title { position: absolute; left: 0; top: 0; z-index: 10; width: 100%; height: 1.35rem; color: #fff;}
+			.zcai-title dt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; max-height: .7rem; padding: .2rem; line-height: .44rem; font-size: .3rem;}
+			.zcai-title dt a, .zcai-title dt a:hover { color: #fff;}
+			.zcai-title dd { padding: 0 .2rem; padding-top: .08rem; line-height: .28rem; font-size: .22rem;}
+			.zcai-howlong { position: absolute; left: 0; bottom: 0; z-index: 10; display: -webkit-box; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; height: .3rem; padding: 0 .2rem; color: #fff;}
+			.zcai-howlong h1 { -webkit-box-flex: 1; font-size: .18rem; color: #fff;}
+			.zcai-howlong p { font-size: .18rem; color: #fff;}
+		</style>
+		<script type="text/javascript">
+			var mynav = new Swiper('#zcai-swiper', {
+		    	slidesPerView: 2.3
+		    });
+		</script>
+	</body>
+</html>

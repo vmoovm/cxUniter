@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>纯文简介</title>
+		<link rel="stylesheet" type="text/css" href="css/cxUniter.css"/>
+		<script src="js/ratio.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="zvideo">
+			<div class="zvideo-header">
+				<div class="zvideo-title">
+					<h1>让科学成为未来中国的文化基因</h1>
+					<p>金晓峰&nbsp;复旦大学教授</p>
+				</div>
+				<div class="zvideo-slide zvideo-slideUp" id="zvideo-slide"><span>简介</span></div>
+			</div>
+			<div class="zvideo-comment" id="zvideo-comment" flag='on'>
+				<h1>讲座简介</h1>
+				<p>西方近代启蒙文化推动科技发展以后，科技成果同时也在改造文化，被
+科技改造后的文化就是科技文化，它又会反作用于科技，同时去影响经
+济和政治。</p>
+				<h1>主讲人简介</h1>
+				<p>金晓峰，法国同步辐射中心和瑞典Chalmers大学博士后(1990-1991)。复
+旦大学物理系讲师（1989）、副教授（1993）和教授（1995）。1994年
+至今，在美国UC Berkeley、德国Max-Planck微结构研究所、香港科技大
+学、美国Utah大学、日本东北大学和美国ORNL国家实验室等多个单位工
+作过。</p>
+			</div>
+		</div>
+		<style type="text/css">
+			/*播放页面及图标*/
+			.zvideo-header { display: -webkit-box; -webkit-box-align: center; min-height: 1.2rem; padding: 0 .3rem;}
+			.zvideo-title { -webkit-box-flex: 1;}
+			.zvideo-title h1 { line-height: .56rem; font-size: .36rem; color: #2f2f2f;}
+			.zvideo-title p { line-height: .38rem; font-size: .22rem;}
+			.zvideo-slide { display: -webkit-box; -webkit-box-align: center;}
+			.zvideo-slide span { display: inline-block; vertical-align: middle; padding-right: .08rem; font-size: .22rem; color: #909090;}
+			.zvideo-slide:after { display: inline-block; vertical-align: middle; content: ''; width: .3rem; height: .3rem; background: url(images/arrowDown.png) center no-repeat; background-size: .2rem .2rem;}
+			.zvideo-slideUp:after { -webkit-transform: rotate(180deg); transform: rotate(180deg);}
+			.zvideo-comment { padding: .26rem .3rem; line-height: .38rem; font-size: .22rem; text-align: justify; color: #909090;}
+			.zvideo-comment h1 { padding-top: .1rem; line-height: .44rem; font-size: .26rem; color: #2f2f2f;}
+		</style>
+		<script>
+		    // 简介
+		    var comment = document.getElementById("zvideo-slide");
+			var commentShow = document.getElementById("zvideo-comment");
+			comment.addEventListener('touchstart', function() {
+				var flag = commentShow.getAttribute('flag');
+				if (flag === 'off' || flag === null) {
+					commentShow.style.display = 'block';
+					commentShow.setAttribute('flag', 'on');
+					comment.classList.add('zvideo-slideUp')
+				} else {
+					commentShow.style.display = 'none';
+					commentShow.setAttribute('flag', 'off');
+					comment.classList.remove('zvideo-slideUp')
+				}
+			});
+		</script>
+	</body>
+</html>

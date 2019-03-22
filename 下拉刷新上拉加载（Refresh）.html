@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>下拉刷新上拉加载</title>
+		<link rel="stylesheet" type="text/css" href="css/cxUniter.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Refresh.css"/>
+		<link rel="stylesheet" type="text/css" href="css/portrait.css"/>
+	</head>
+	<body>
+		<div class="" id="pushUp">
+			<header class="cx_header">
+				<div class="cx_header-box">
+					<h1 class="cx_header-title">学习通</h1>
+					<div class="cx_header-link">
+						<div class="cx_header-body">
+							<a class="cx_header-arrow" href="#"></a>
+							<a class="cx_header-left" href="#">确定</a>
+							<p class="cx_header-flex"></p>
+							<a class="cx_header-right" href="#">取消</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--main start-->
+			<div class="cx_portrait">
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-num">1</div>
+					<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>
+								<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">学号:1958545</dd>
+						</dl>
+						<dl class="cx_portrait-right">
+							<dt>06'25"</dt>
+							<dd>北京</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-num">2</div>
+					<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>
+								<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">学号:1958545</dd>
+						</dl>
+						<dl class="cx_portrait-right">
+							<dt>06'25"</dt>
+							<dd>北京</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="cx_portrait-row">
+					<div class="cx_portrait-num">3</div>
+					<div class="cx_portrait-pic"><img src="temp/201709271849_03.jpg" /></div>
+					<div class="cx_portrait-txt">
+						<dl class="cx_portrait-th">
+							<dt class="cx_portrait-align">
+								<a href="#">柳辰飞</a>
+								<!--<div class="cx_portrait-flower">放小花</div>
+								<div class="cx_portrait-star">放星星</div>-->
+							</dt>
+							<dd class="cx_portrait-tt">学号:1958545</dd>
+						</dl>
+						<dl class="cx_portrait-right">
+							<dt>06'25"</dt>
+							<dd>北京</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!--main end-->
+		</div>
+		
+		<script src="js/ratio.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Refresh.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/*
+			 * 参数1说明：需要加一高度参数
+			 * refreshId: 必填项，下拉容器  例："#refreshId",
+			 * 参数2说明：
+			 * backSite:选填项，默认值-30,下拉刷新恢复后的位置，
+			 * swipeDist:选填项，默认值40,滑动多长可以触发下拉函数，
+			 * refreshTime:选填项，默认值2000,刷新状态显示多久后消失，
+			 * swipeAngle:选填项，默认值60,滑动角度小于N值时触发滑动，越小越难触发，
+			 * isStopDown: 选填项，默认开启，值false， 是否关闭下拉刷新  false为开启 true为关闭，
+			 * isAuto: 选填项，默认为自动消失文字提示状态，值true,
+			 * pushDownTxt: 选填项，'下拉刷新',
+			 * releaseTxt: 选填项，'释放刷新',
+			 * pushDownLoadingTxt: 选填项，'正在刷新...',
+			 * scroll: 选填项，默认null, 可自定义滚动条元素，
+			 * onRefreshStart: 选填项，开始刷新时触发此函数，
+			 * onRefreshEnd: 选填项，刷新结束时触发此函数
+			 * 方法说明：
+			 * ChangeState() 手动恢复状态,在配置中isAuto值为false时，起作用，否则会弹alert()提示
+			 * ResetState(boolean) 是否禁止下拉刷新   传布尔值  true :禁止下拉刷新  false:开启下拉刷新
+			 * 
+			 * 前端：张中乐 20170605
+			 * */
+			
+			//下拉刷新
+			var refresh=new PushRefresh("#pushUp",{
+				// pushDownLoadingTxt:'自定义文本',
+				// scroll:'#scroll',
+				onRefreshStart:function(){
+					console.log('触发的是下拉事件')
+					//refresh.zconf.isStopDown=false;
+				},
+				onRefreshEnd:function(){
+					console.log('下拉完成后触发，一般与isAuto和手动恢复时会用到')
+					//refresh.zconf.isStopDown=false;
+				}
+				
+			});
+			
+			/*
+			 * 功能：上拉加载
+			 * 使用方法:
+			 * new PushUp("触发滑动标签id",{});
+			 * 参数1说明：
+			 * PushUpId: 必填项，下拉容器  例：document.getElementById("refreshId"),
+			 * 参数2说明： 
+			 * isStopUp: 选填项，默认开启，值false，是否关闭上拉加载   false为开启 true为关闭，
+			 * scroll: 选填项，默认null, 可自定义滚动条元素，
+			 * loadingTxt: 选填项，'加载中...',
+			 * pushUpTxt: 选填项，'上滑加载更多',
+			 * warnningTxt: 选填项，'没有更多',
+			 * isData: 是否有数据，默认true,有数据为true,没数据为false,
+			 * Dataloading:加载更多事件，
+			 * 方法说明：
+			 * ChangeState(boolean) 传值 布尔型 true :还有数据，false:无数据
+			 * ResetState(boolean) 传值 布尔型 true:关闭上拉加载，false:开启上拉加载
+			 * 
+			 * 前端：张中乐 20170605
+			 * */
+			//上拉加载
+			var push=new PushUp("#pushUp",{
+				// scroll:'#scroll',
+				// warnningTxt: '已经到底了',
+				Dataloading:function(){
+					//处理数据代码段
+					console.log('触发的是上拉事件')
+					more();
+					// document.getElementsByTagName('body')[0].appendChild(document.getElementById('tbox').cloneNode());
+					
+					//push.ChangeState(true);
+					
+					//push.ResetState(true);
+				}
+			});
+			
+			//push.ChangeState(true);
+		
+			//push.ChangeState(true);
+			
+			
+			//测试函数
+			function more(){
+				var a=confirm('还有数据吗');
+				console.log(a);
+				document.getElementById('scroll').appendChild(document.getElementById('tbox').cloneNode());
+				push.ChangeState(a);
+				
+			}
+			
+		</script>
+	</body>
+</html>

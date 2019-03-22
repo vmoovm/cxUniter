@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>图片展示列表</title>
+<link rel="stylesheet" href="../css/cxUniter.css"/>
+<link rel="stylesheet" href="../css/swiper.css"/>
+<link rel="stylesheet" href="../css/upLoadImgList.css"/>
+<script src="../js/jquery-1.9.0.min.js"></script>
+<script src="../js/ratio.js"></script>
+<script src="../js/swiper.min.js"></script>
+<!--<script src="../js/ResetImg.min.js"></script>-->
+<script src="../js/ResetImg.js"></script>
+</head>
+<body>
+	<header class="cx_header">
+		<div class="cx_header-box">
+			<h1 class="cx_header-title">学习通</h1>
+			<div class="cx_header-link">
+				<div class="cx_header-body">
+					<a class="cx_header-arrow" href="#"></a>
+					<a class="cx_header-left" href="#">确定</a>
+					<p class="cx_header-flex"></p>
+					<a class="cx_header-right" href="#">取消</a>
+				</div>
+			</div>
+		</div>
+	</header>
+		<div class="cx_imgList">
+			<div class="cx_imgList-header">
+				<h2>选人标题标题</h2>
+			</div>
+			<div class="cx_imgList-box">
+				<div class="swiper-container" id="zimgList">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide cx_imgList-item">
+			        		<dl class="cx_imgList-bg">
+			        			<dd class="cx_imgList-img"><img src="../temp/201706221056_03.jpg?w290h290"/></dd>
+			        		</dl>
+				        </div>
+				        <div class="swiper-slide cx_imgList-item">
+			        		<dl class="cx_imgList-bg">
+			        			<dd class="cx_imgList-img"><img src="../temp/201601191126_13.png?w290h290"/></dd>
+			        		</dl>
+				        </div>
+				        <div class="swiper-slide cx_imgList-item">
+			        		<dl class="cx_imgList-bg">
+			        			<dd class="cx_imgList-img"><img src="../temp/201706221056_03.jpg?w290h290"/></dd>
+			        		</dl>
+				        </div>
+				        <div class="swiper-slide cx_imgList-item">
+			        		<dl class="cx_imgList-bg">
+			        			<dd class="cx_imgList-img"><img src="../temp/20170721150128.png?w110h267"/></dd>
+			        		</dl>
+				        </div>
+				        <div class="swiper-slide cx_imgList-item">
+			        		<dl class="cx_imgList-bg">
+			        			<dd class="cx_imgList-img"><img src="../temp/201612061747_06.png?w599h229"/></dd>
+			        		</dl>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	<script type="text/javascript">
+		//course
+		var mynav = new Swiper('#zimgList', {
+	        scrollbarHide: true,
+        	slidesPerView: 'auto'
+	    });
+		//实例化图片填满格子
+		var sdff =new ResetImg('#zimgList', {
+			getImgSize: 'auto',
+			imgSizeClass: {
+				wc: 'cx_imgList-imgw100',
+				hc: 'cx_imgList-imgh100',
+				imgBox:'.cx_imgList-item'
+			}
+		});
+		
+	</script>
+</body>
+
+</html>

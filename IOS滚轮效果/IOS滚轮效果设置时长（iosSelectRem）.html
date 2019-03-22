@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" /> 
+<title>IOS滚轮效果设置时长</title>
+<link href="../css/cxUniter.css" rel="stylesheet" type="text/css" />
+<link href="../css/fieldList.css" rel="stylesheet" type="text/css" />
+<link href="../css/iosSelectRem.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="../js/ratio.js" type="text/javascript"></script>
+<script src="../js/iosSelectRem.js"></script>
+</head>
+
+<body>
+<!--main start-->
+<div class="zbox">
+	<header class="cx_header">
+		<div class="cx_header-box">
+			<h1 class="cx_header-title">学习通</h1>
+			<div class="cx_header-link">
+				<div class="cx_header-body">
+					<a class="cx_header-arrow" href="#"></a>
+					<a class="cx_header-left" href="#">确定</a>
+					<p class="cx_header-flex"></p>
+					<a class="cx_header-right" href="#">取消</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="zbox_content">
+		<div class="cx_fieldList-group">
+			<dl class="cx_fieldList-field">
+				<dt>分组方式</dt>
+				<dd class="cx_fieldList-arrow">随机分组</dd>
+			</dl>	
+			<dl class="cx_fieldList-field">
+				<dt>评价方式</dt>
+				<dd class="cx_fieldList-arrow">教师评价，指定人员评价</dd>
+			</dl>
+		</div>
+		<div class="cx_split-max"></div>
+		<div class="cx_fieldList-group" id="zsetTime">
+			<dl class="cx_fieldList-field">
+			    <dt>设置时长</dt>
+			    <dd><span class="zblue" data-date="" data-hour="" data-minute="" id="showDate">选择时间</span> </dd>
+			</dl> 
+		</div>
+	</div>
+</div>
+<!--main end-->
+<script type="text/javascript">
+    var selectDateDom = $('#zsetTime');
+    var showDateDom = $('#showDate');
+    // 初始化时间
+    showDateDom.attr('data-date', 0);
+    showDateDom.attr('data-hour', 0);
+    // 数据初始化
+    function formatDate (count) {
+        var arr = [];
+        for (var i = 0; i <= count; i++) {
+            arr.push({
+                id: i + '',
+                value: i + '天'
+            });
+        }
+        arr.push({id:i,value:'手动结束'});
+        return arr;
+    }
+    var formatHour = function(count) {
+        var arr = [];
+        if(count=='--'){
+        	arr.push({
+	                id: 21,//随便写数字
+	                value: count
+	            });
+        }else{
+	        for (var i = 0,len = count; i < len; i++) {
+	            arr.push({
+	                id: i,
+	                value: i + '小时'
+	            });
+	        }
+        }
+        return arr;
+    };
+    var formatMinute = function(count) {
+        var arr = [];
+        if(count=='--'){
+        	arr.push({
+	                id: 50,//随便写数字
+	                value: count
+	            });
+        }else if(count==61){//0天0小时保证最小分钟为5分钟
+	        for (var i = 1,len = count-1; i < len; i++) {
+	            arr.push({
+	                id: i,
+	                value: i + '分钟'
+	            });
+	        }
+        }else{
+	        for (var i = 0,len = count; i < len; i++) {
+	            arr.push({
+	                id: i,
+	                value: i + '分钟'
+	            });
+	        }
+        }
+        return arr;
+    };
+    var dateData = function (callback) {
+        callback(formatDate(29));
+    };
+    var hourData = function(date, callback) {
+        if (/^(30)$/.test(date)) {
+            callback(formatHour('--'));
+        }else{
+        	callback(formatHour(24));
+        }
+    };
+    var minuteData = function(date, hour, callback) {
+    	if (/^(30)$/.test(date)) {//大于29天时为手动结束，无值
+	    	callback(formatMinute('--'));
+    	}else if (/^(0)$/.test(date)) {//0天
+    	    if(/^(0)$/.test(hour)){//0小时保证最小分钟为N分钟
+    	    	callback(formatMinute(61));
+    	    }else{
+    	    	callback(formatMinute(60));
+    	    }
+    	}else{
+    		callback(formatMinute(60));
+    	}
+    };
+    
+    selectDateDom.bind('click', function () {
+        var oneLevelId = showDateDom.attr('data-date');
+        var twoLevelId = showDateDom.attr('data-hour');
+        var threeLevelId = showDateDom.attr('data-minute');
+        var iosSelect = new IosSelect(3, 
+            [dateData, hourData, minuteData],
+            {
+                title: '设置时长',
+                itemHeight: 0.6786,
+                headerHeight:0.819,
+                relation: [1, 0, 0, 0],
+                cssUnit:'rem',
+                itemShowCount: 7,
+                oneLevelId: oneLevelId,
+                twoLevelId: twoLevelId,
+                threeLevelId: threeLevelId,
+                callback: function (selectOneObj, selectTwoObj, selectThreeObj) {
+                    showDateDom.attr('data-date', selectOneObj.id);
+                    showDateDom.attr('data-hour', selectTwoObj.id);
+                    showDateDom.attr('data-minute', selectThreeObj.id);
+                    if(selectOneObj.value=='手动结束'){
+    					showDateDom.html(selectOneObj.value);
+                    }else if(selectOneObj.value=="0天"){
+	                    if(selectTwoObj.value=="0小时"){
+	                    	showDateDom.html(selectThreeObj.value);
+	                    }else{
+	                    	showDateDom.html(selectTwoObj.value + selectThreeObj.value);
+	                    }
+                    }else{
+                    	showDateDom.html(selectOneObj.value + selectTwoObj.value + selectThreeObj.value);
+                    }
+                    showDateDom.attr({'data-date':selectOneObj.value.replace(/天/,''),'data-hour':selectTwoObj.value.replace(/小时/,''),'data-minute':selectThreeObj.value.replace(/分钟/,'')});
+                }
+        });
+    });
+</script>
+
+</body>
+</html>

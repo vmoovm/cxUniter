@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>资源监控</title>
+		<link href="css/base.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/ratio.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/cx_echarts_vintage.js"></script>
+	</head>
+
+	<body>
+		<ul class="cx_tabList">
+			<li class="cx_tabList-cur">今日学习监控</li>
+			<li>全校学习监控</li>
+		</ul>
+		<div class="zcount">
+			<dl class="zcount-flex zcount-item">
+				<dt>资源总量</dt>
+				<dd>94163</dd>
+			</dl>
+			<dl class="zcount-flex zcount-item">
+				<dt>今日上传资源量</dt>
+				<dd>367</dd>
+			</dl>
+			<dl class="zcount-flex zcount-item">
+				<dt>上传最多资源类型</dt>
+				<dd>图片</dd>
+			</dl>
+		</div>
+		<!--资源分类图 start-->
+		<div class="ztitle">
+			<p class="ztitle-type"><span>动态</span></p><span class="ztitle-state">实时</span><h1 class="ztitle-th">王老师在10：11分上传了一个视频到我的课程…</h1>
+		</div>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">资源分类图</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_zi_yuan_fen_lei">
+				
+			</div>
+			<div class="zmodule_echarts-fields">
+				<!--dl.zmodule_echarts-field*11>dt{其他}+dd.zcolor${12268}-->
+				<dl class="zmodule_echarts-field">
+					<dt>其他</dt>
+					<dd class="zcolor1">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>图片</dt>
+					<dd class="zcolor2">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>WORD</dt>
+					<dd class="zcolor3">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>PPT</dt>
+					<dd class="zcolor4">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>音频数 </dt>
+					<dd class="zcolor5">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>视频  </dt>
+					<dd class="zcolor6">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>PDF</dt>
+					<dd class="zcolor7">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>EXCEL</dt>
+					<dd class="zcolor8">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>试题量</dt>
+					<dd class="zcolor9">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>作业量</dt>
+					<dd class="zcolor10">12268</dd>
+				</dl>
+				<dl class="zmodule_echarts-field">
+					<dt>试卷量</dt>
+					<dd class="zcolor11">12268</dd>
+				</dl>
+			</div>
+		</div>
+		<!--资源分类图 end-->
+		<!--课程资源排名 start-->
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">课程资源排名</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_ke_cheng_zi_yuan_pai_ming">
+				
+			</div>
+		</div>
+		<!--课程资源排名 end-->
+		<!--上传资源数教师排名 start-->
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">上传资源数教师排名</h2>
+			</div>
+			<div class="zstuHot-bg">
+				<div class="zstuHot-first">
+					<p class="zstuHot-img"><img src="temp/20160104162001.png"/></p>
+					<dl class="zstuHot-nameBefore">
+						<dt>章小蕙</dt>
+						<dd>2082</dd>
+					</dl>
+					<h1 class="zstuHot-school">网络学习教学学院</h1>
+				</div>
+				<div class="zstuHot-second">
+					<p class="zstuHot-img"><img src="temp/20160104162001.png"/></p>
+					<dl class="zstuHot-nameBefore">
+						<dt>刘莘</dt>
+						<dd>1964</dd>
+					</dl>
+					<h1 class="zstuHot-school">动画影视学院</h1>
+				</div>
+				<div class="zstuHot-third">
+					<p class="zstuHot-img"><img src="temp/20160104162001.png"/></p>
+					<dl class="zstuHot-nameBefore">
+						<dt>唐晓玲</dt>
+						<dd>263</dd>
+					</dl>
+					<h1 class="zstuHot-school">中国历史学院</h1>
+				</div>
+			</div>
+			<!--热门标签 start-->
+			<p class="cx_split"></p>
+			<ul class="zhotTags">
+				<li class="zhotTags-item"><a href="javascript:void(0)">最丰富的课程</a></li>
+				<li class="zhotTags-item zcur"><a href="javascript:void(0)">题库量最多的老师</a></li>
+				<li class="zhotTags-item"><a href="javascript:void(0)">资源最多的老师</a></li>
+				<li class="zhotTags-item"><a href="javascript:void(0)">活跃学生</a></li>
+			</ul>
+			<!--热门标签 end-->
+		</div>
+		<!--上传资源数教师排名 end-->
+		<script src="js/mychart_zi_yuan_jian_kong.js"></script>
+	</body>
+</html>

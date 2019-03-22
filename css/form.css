@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*----------------------------------------------------
+表单
+-----------------------------------------------------*/
+
+.zwelcome { padding: .68rem .3rem .13rem; height: 1.59rem;}
+.zwelcome dt { line-height: 1.08rem; font-size: .7rem; color: #454545;}
+.zwelcome dd { line-height: .68rem; font-size: .32rem; color: #999;}
+.zwelcome dd.zerror { font-size: .276rem; color: #e33636;}
+
+.zform { margin-left: .3rem; margin-right: .3rem;}
+.zform-row { display: -webkit-box; margin-left: .3rem; margin-right: .3rem; padding-top: .32rem; background-image: -webkit-linear-gradient(transparent 40%, #ebebeb 60%); background-repeat: no-repeat; background-position: bottom; background-size: 100% 1px; background-color: #fff;}
+.zform-input { -webkit-box-flex: 1;}
+.zform-input input { width: 100%; height: .9rem; border: none; background: none; line-height: .9rem; font-size: .32rem;}
+.zform-link { display: -webkit-box; -webkit-box-align: center; padding-left: .3rem; color: #999; font-size: .24rem;}
+.zform-link a { line-height: .9rem; color: #09f; }
+
+/*时时检索下拉菜单*/
+.zform-site { position: relative; width: 100%; height: 0px; display: none;}
+.zform-search { position: absolute; left: 0; width: 100%; padding-top: .2rem; padding-bottom: .5rem; background-color: #fffefd; color: #fff;  box-shadow: 0 .05rem .2rem #f5f6f7; font-size: .3rem;}
+.zform-search dd { padding-left: .3rem; padding-right: .3rem;}
+.zform-search dd a { display: block; line-height: .6rem; background-image: -webkit-linear-gradient(transparent 40%, #ebebeb 60%); background-position: 0 bottom; background-repeat: no-repeat; background-size: 100% 1px; color: #666;}
+

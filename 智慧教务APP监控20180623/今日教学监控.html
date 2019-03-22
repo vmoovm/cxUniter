@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<title>今日教学监控</title>
+		<link href="css/base.css" rel="stylesheet" type="text/css" />
+		<link href="css/swiper.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/ratio.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/cx_echarts_vintage.js"></script>
+	</head>
+
+	<body>
+		<ul class="cx_tabList">
+			<li class="cx_tabList-cur">今日教学监控</li>
+			<li>历史教学监控</li>
+		</ul>
+		<div class="">
+			<div class="swiper-container ztody" id="ztody">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide ztody-slide">
+			        	<!--图上标题 start-->
+			        	<dl class="ztody-item">
+			        		<dd class="ztody-pic"><img src="temp/201806231642_14.png"/><span class="ztody-state1">进行中</span></dd>
+			        		<dd class="ztody-info">
+			        			<h1 class="ztody-th"><a href="#">精益求精数据分析术…</a></h1>
+			        			<p class="ztody-tp">经济管理学院</p>
+			        			<ul class="ztody-field">
+			        				<li><em>正在进行的活动：</em><span>签到</span></li>
+			        				<!--<li><em></em><span></span></li>-->
+			        			</ul>
+			        		</dd>
+			        	</dl>
+			        	<!--图上标题 end-->
+			        </div>
+			        <div class="swiper-slide ztody-slide">
+			        	<!--图上标题 start-->
+			        	<dl class="ztody-item">
+			        		<dd class="ztody-pic"><img src="temp/201806231642_16.png"/><span class="ztody-state2">待进行</span></dd>
+			        		<dd class="ztody-info">
+			        			<h1 class="ztody-th"><a href="#">商业成功学演讲</a></h1>
+			        			<p class="ztody-tp">经济管理学院</p>
+			        		</dd>
+			        	</dl>
+			        	<!--图上标题 end-->
+			        </div>
+			        <div class="swiper-slide ztody-slide">
+			        	<!--图上标题 start-->
+			        	<dl class="ztody-item">
+			        		<dd class="ztody-pic"><img src="temp/201806231642_22.png"/><span class="ztody-state3">已结束</span></dd>
+			        		<dd class="ztody-info">
+			        			<h1 class="ztody-th"><a href="#">商业成功学演讲</a></h1>
+			        			<p class="ztody-tp">经济管理学院</p>
+			        			<ul class="ztody-field">
+			        				<li><em>签到率</em><span>91% </span></li>
+			        				<li><em>活跃度</em><span>21</span></li>
+			        			</ul>
+			        		</dd>
+			        	</dl>
+			        	<!--图上标题 end-->
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">老师上课情况</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_lao_shi_shang_ke">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>未上课老师数</p>
+						<h1>63</h1>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col2">
+						<p>上课教师数</p>
+						<h1>21</h1>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col3">
+						<p>异常数</p>
+						<h1>3</h1>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">课堂活动发放情况</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_ke_tang_huo_dong_fa_fang">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>今日活动情况</p>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col4">
+						<p>历史平均单日发布总数</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">课下作业布置情况</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_ke_xia_zuo_ye_bu_zhi">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>今日发布总数</p>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col4">
+						<p>历史平均单日发布量</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">课下作业批阅情况</h2>
+			</div>
+			<div class="zmodule_echarts" id="echarts_ke_xia_zuo_ye_pi_yue">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>今日批阅量</p>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col4">
+						<p>历史批阅量</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class="cx_split"></p>
+		<div class="zmodule">
+			<div class="zmodule_ht-lg">
+				<h2 class="zmodule_arrow-color">师生互动情况</h2>
+			</div>
+			<div class="zmodule_echarts-title">
+				<h1>本周访问量趋势图</h1>
+			</div>
+			<div class="zmodule_echarts" id="echarts_ben_zhou_fang_wen_liang">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>本周教师访问量</p>
+						<h1 class="zcolor1">今日教师访问量：<span>109</span> </h1>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col4">
+						<p>本周学生访问量</p>
+						<h1 class="zcolor5">今日学生访问量：<span>311</span></h1>
+					</li>
+				</ul>
+			</div>
+			<div class="zmodule_echarts-title zmodule_echarts-mtop">
+				<h1>今日教师、学生讨论数对比</h1>
+			</div>
+			<div class="zmodule_echarts" id="echarts_jiao_shi_xue_sheng_ping_lun_shu">
+				
+			</div>
+			<div class="zmodule_echarts-info">
+				<ul class="zmodule_echarts-layout">
+					<li class="zmodule_echarts-col zmodule_echarts-col1">
+						<p>教师讨论数 <span>109</span></p>
+						<h1 class="zcolor1">教师发帖数：<span>32</span> </h1>
+						<h1 class="zcolor1">教师回帖数：<span>67</span> </h1>
+					</li>
+					<li class="zmodule_echarts-col zmodule_echarts-col5">
+						<p>本周学生访问量 <span>311</span></p>
+						<h1 class="zcolor5">学生发帖数：<span>214</span></h1>
+						<h1 class="zcolor5">学生回帖数：<span>169</span></h1>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class="cx_split"></p>
+		<script src="js/mychart_jiao_xue_jian_kong.js"></script>
+		<script type="text/javascript">
+			var ztody = new Swiper('#ztody', {
+		        scrollbarHide: true,
+	        	slidesPerView: 'auto'
+				
+			})
+		</script>
+	</body>
+</html>

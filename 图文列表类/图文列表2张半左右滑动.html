@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图文列表2张半左右滑动</title>
+		<link rel="stylesheet" type="text/css" href="../css/cxUniter.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+		<script src="../js/ratio.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="">
+			<div class="swiper-container ztody" id="ztody">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide ztody-slide">
+			        	<!--图上标题 start-->
+			        	<dl class="ztody-item">
+			        		<dd class="ztody-pic"><img src="../temp/201806231642_14.png"/><span class="ztody-state1">进行中</span></dd>
+			        		<dd class="ztody-info">
+			        			<h1 class="ztody-th"><a href="#">精益求精数据分析术…</a></h1>
+			        			<p class="ztody-tp">经济管理学院</p>
+			        			<ul class="ztody-field">
+			        				<li><em>正在进行的活动：</em><span>签到</span></li>
+			        				<!--<li><em></em><span></span></li>-->
+			        			</ul>
+			        		</dd>
+			        	</dl>
+			        	<!--图上标题 end-->
+			        </div>
+			        <div class="swiper-slide ztody-slide">
+			        	<!--图上标题 start-->
+			        	<dl class="ztody-item">
+			        		<dd class="ztody-pic"><img src="../temp/201806231642_16.png"/><span class="ztody-state2">待进行</span></dd>
+			        		<dd class="ztody-info">
+			        			<h1 class="ztody-th"><a href="#">商业成功学演讲</a></h1>
+			        			<p class="ztody-tp">经济管理学院</p>
+			        		</dd>
+			        	</dl>
+			        	<!--图上标题 end-->
+			        </div>
+			        <div class="swiper-slide ztody-slide">
+			        	<!--图上标题 start-->
+			        	<dl class="ztody-item">
+			        		<dd class="ztody-pic"><img src="../temp/201806231642_22.png"/><span class="ztody-state3">已结束</span></dd>
+			        		<dd class="ztody-info">
+			        			<h1 class="ztody-th"><a href="#">商业成功学演讲</a></h1>
+			        			<p class="ztody-tp">经济管理学院</p>
+			        			<ul class="ztody-field">
+			        				<li><em>签到率</em><span>91% </span></li>
+			        				<li><em>活跃度</em><span>21</span></li>
+			        			</ul>
+			        		</dd>
+			        	</dl>
+			        	<!--图上标题 end-->
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<style type="text/css">
+			/*----------------------------------------------------
+			今日教学监控
+			-----------------------------------------------------*/
+			.ztody { padding: .48rem .3rem;}
+			.ztody-slide { width: 2.7rem; height: 2.97rem; margin-right: .2rem; border-radius: .08rem; overflow: hidden; box-shadow: 0 0 .3rem .02rem #ccc; background-color: #fff;}
+			.ztody-item  { width: 2.7rem; height: 2.97rem;}
+			.ztody-pic  { position: relative; width: 2.7rem; height: 1.64rem; background: #ccc; overflow: hidden;}
+			.ztody-pic img { width: 100%; height: 100%;}
+			.ztody-state1,
+			.ztody-state2,
+			.ztody-state3 { position: absolute; right: 0; bottom: 0; padding-left: .04rem; border-radius: .02rem 0 0 0; padding-right: .04rem; line-height: .36rem; font-size: .24rem;}
+			.ztody-state1 { background-color: #09f; color: #fff;}
+			.ztody-state2 { background-color: #f67668; color: #fff;}
+			.ztody-state3 { background-color: #797979; color: #fff;}
+			.ztody-info { height: 1.33rem; padding-left: .1rem; padding-right: .1rem; font-size: .22rem;}
+			.ztody-th { padding-top: .1rem; line-height: .32rem; font-size: .24rem; color: #444;}
+			.ztody-th a { color: #444;}
+			.ztody-tp { padding-top: .03rem; line-height: .32rem; color: #999;}
+			.ztody-field { display: -webkit-box; -webkit-box-align: center; padding-top: .04rem;}
+			.ztody-field li { -webkit-box-flex: 1; padding-right: .22rem;}
+			.ztody-field li em { color: #999;}
+			.ztody-field li span { color: #333;}
+		</style>
+		<script type="text/javascript">
+			var ztody = new Swiper('#ztody', {
+		        scrollbarHide: true,
+	        	slidesPerView: 'auto'
+				
+			})
+		</script>
+	</body>
+</html>
