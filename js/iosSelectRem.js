@@ -1077,7 +1077,7 @@
 		this.options.unitHeight = options.unitHeight || 0; // 列名称单位行高
 		this.options.unitItem = options.unitItem || []; // 列名称单位，数组长度必须为5位，不足请以空字符串填充，如：['年','月','日','','']
 		this.options.deg = options.deg || 26;
-		this.options.translateZ = options.translateZ || 90
+		this.options.translateZ = options.translateZ || 1.5 // 之前为90
 		this.options.relation = iosSelectUtil.isArray(this.options.relation)? this.options.relation: [];
 		this.options.oneTwoRelation = this.options.relation[0];
 		this.options.twoThreeRelation = this.options.relation[1];

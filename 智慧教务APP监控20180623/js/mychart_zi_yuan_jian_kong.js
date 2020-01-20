@@ -3,6 +3,7 @@
 var myChart_zi_yuan_fen_lei = echarts.init(document.getElementById('echarts_zi_yuan_fen_lei'), 'cx_echarts_vintage');
 
 var option_zi_yuan_fen_lei = {
+	color: ['#f00', '#ff0', '#00f'],
     tooltip: {
         trigger: 'item',
         showDelay: 0,  

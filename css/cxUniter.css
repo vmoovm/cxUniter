@@ -77,7 +77,7 @@ a:hover, a:focus, a:active { color:#333; text-decoration: none; }
 .fr { float: right;}
 /*禁止选中*/
 .cx_unSelect { moz-user-select: -moz-none; -moz-user-select: none; -o-user-select:none; -khtml-user-select:none; -webkit-user-select:none; -ms-user-select:none; user-select:none; }
-.cx_br { word-wrap:break-word;	word-break:break-word;}
+.cx_br { word-wrap:break-word;	word-break:break-word; /*word-break: break-all;*/}
 
 .cx_box { display: -webkit-box; -webkit-box-orient: vertical;  height: 100vh;}
 .cx_box-top { position: relative; width: 100%; height: 0.0023rem; z-index:100000;}
@@ -89,7 +89,7 @@ a:hover, a:focus, a:active { color:#333; text-decoration: none; }
 公共头
 -----------------------------------------------------*/
 .cx_header { position: relative; height: 1rem;}
-.cx_header-box { position: relative; height: 1rem;background-image:-webkit-linear-gradient(#ebebeb 70%,transparent 30%),-webkit-linear-gradient(transparent 40%,#ebebeb 60% ); background-image:linear-gradient(#ebebeb 60%,transparent 40%),linear-gradient(transparent 40%,#ebebeb 60% ); background-size: 100% 1px; background-position: top,bottom; background-image:-webkit-linear-gradient(#ebebeb 60%,transparent 40%),-webkit-linear-gradient(transparent 40%,#ebebeb 60% ); background-size: 100% 1px; background-position: top,bottom; background-repeat: no-repeat;  background-color: #fff;}
+.cx_header-box { position: relative; height: 1rem; background-image: -webkit-linear-gradient(transparent 40%,#ebebeb 40% ); background-image: linear-gradient(transparent 40%,#ebebeb 40% ); background-size: 100% 1px; background-position: bottom; background-repeat: no-repeat;  background-color: #fff;}
 .cx_header-title { position: absolute; bottom: 0; left: 14%; right: 14%; width: 72%; height: 1rem; line-height: 1rem; text-align: center; font-size: .36rem; color: #000; z-index: 10;}
 .cx_header-link { position: absolute; bottom: 0; left: 0rem; right: 0rem; width: 100%; height: 1rem;  -webkit-box-sizing: border-box; box-sizing: border-box;  z-index: 50;}
 .cx_header-box,

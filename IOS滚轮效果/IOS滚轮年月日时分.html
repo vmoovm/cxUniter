@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>IOS滚轮效果设置时期年月日</title>
+		<link href="../css/cxUniter.css" rel="stylesheet" type="text/css" />
+		<link href="../css/fieldList.css" rel="stylesheet" type="text/css" />
+		<link href="../css/iosSelectRem.css" rel="stylesheet" type="text/css" />
+		<script src="../js/ratio.js"></script>
+		<script src="../js/iosSelectRem.js"></script>
+		<script src="../js/gettime.js"></script>
+	</head>
+
+	<body>
+		<div class="zbox">
+			<header class="cx_header">
+				<div class="cx_header-box">
+					<h1 class="cx_header-title">IOS滚轮效果设置时期年月日</h1>
+					<div class="cx_header-link">
+						<div class="cx_header-body">
+							<a class="cx_header-arrow" href="#"></a>
+							<a class="cx_header-left" href="#">确定</a>
+							<p class="cx_header-flex"></p>
+							<a class="cx_header-right" href="#">取消</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="zbox_content">
+				<div class="cx_fieldList-group">
+					<dl class="cx_fieldList-field" >
+					    <dt>设置日期时间</dt>
+					    <dd><span class="zblue" data-year="" data-month="" data-date="" data-hour="" data-minute="" id="selectTime" >选择时间</span> </dd>
+					</dl> 
+				</div>
+				<div class="cx_fieldList-group">
+					<dl class="cx_fieldList-field"  id="selectTime1" >
+					    <dt>设置日期时间</dt>
+					    <dd><span class="zblue" data-year="" data-month="" data-date="" data-hour="" data-minute="">选择时间</span> </dd>
+					</dl> 
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 不指定标签
+			new CXFun_gettime("#selectTime", 5, 10, false, function (o) {
+				console.log(o)
+			});
+			// 指定标签
+			new CXFun_gettime("#selectTime1", 5, 10, '.zblue', function (o) {
+				console.log(o)
+			});
+		</script>
+	</body>
+
+</html>
