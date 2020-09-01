@@ -257,7 +257,8 @@ loading
 .cx_empty-icon a,
 .cx_empty-txt a { color: #09f;}
 .cx_empty-bottom { position: fixed; bottom: 0.936rem; width: 100%;}
-
+.cx_empty-middle { display: -webkit-box; -webkit-box-align: center; -webkit-box-pack: center; padding-top: 0; height: 80vh;}
+.cx_empty-middle .cx_empty-icon { min-width: 2.4rem;}
 /*-----------------------------------------------------
 按钮
 -----------------------------------------------------*/

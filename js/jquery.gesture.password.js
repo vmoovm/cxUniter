@@ -251,9 +251,9 @@
 			that.$ctx.beginPath();
 			that.$ctx.translate(x, y);
 			that.$ctx.rotate(radians);
-			that.$ctx.moveTo(10,-25);
+			that.$ctx.moveTo(5,-35);
 			that.$ctx.lineTo(0, -45);
-			that.$ctx.lineTo(-10, -25);
+			that.$ctx.lineTo(-5, -35);
 			that.$ctx.closePath();
 			that.$ctx.restore();
 			that.$ctx.fill();
@@ -468,8 +468,8 @@
         flag: true,  	// 是否允许重画 或者禁止手势
         isRem: false, 	// 是否使用rem（默认比例750/100
         isThrough: true, 	// 是否自动连接两点之间的空白点
-        definition: 2, 	// 清晰度,越大越清晰，但线条会变的更细
-        lineWidth: 3, 	// 线条粗细基数
+        definition: 1, 	// 清晰度,越大越清晰，但线条会变的更细
+        lineWidth: 2, 	// 线条粗细基数
         connectLen: 3 	// 连接点的个数  false不限制个数
     };
 
